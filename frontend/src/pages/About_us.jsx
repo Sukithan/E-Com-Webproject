@@ -7,3 +7,5 @@ const About_us = () => {
 }
 
 export default About_us
+
+//hi im induruwa 
