@@ -1,0 +1,145 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pic {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.cart-header h2 {
+  flex: 1;
+  text-align: center;
+}
+
+.cart-table {
+  width: 100%;
+}
+
+.cart-headings {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.cart-headings span {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart-items {
+  width: 100%;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+}
+
+.qty-controls button {
+  background-color: #ddd;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.qty-controls span {
+  font-size: 16px;
+  width: 40px;
+  text-align: center;
+}
+
+.item-details span {
+  flex: 1;
+  text-align: center;
+}
+
+.item-details button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.item-actions button {
+  background-color: #ff6961;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-actions button:nth-child(2) {
+  background-color: #77dd77;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.total {
+  font-size: 18px;
+}
+
+.order-button {
+  background-color: #ff6961;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cart-title{
+  font-size: 30px;
+  font-weight: bold;
+}

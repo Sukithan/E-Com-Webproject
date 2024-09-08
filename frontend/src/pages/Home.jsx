@@ -1,13 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ImageSwitcher from '../components/ImageSwithcher';
+import Footer from '../components/footer';
+
+const images = [
+  '/1.jpg',
+  '/iphone.webp',
+  '/mac2.webp',
+  '/car.jpg',
+  '/teddy.jpeg',
+  // Add more image paths as needed
+];
 
 const Home = () => {
   return (
     <div>
-      <section className='hero bg-gray-800 text-white py-20 text-center'>
-        <h1 className='text-4xl font-bold mb-4'>Welcome to C-Store</h1>
-        <p className='text-lg mb-8'>Explore the best in electronics and toys!</p>
-        <button className='bg-yellow-500 text-black px-6 py-2 rounded-full font-medium hover:bg-yellow-600'>Shop Now</button>
-      </section>
+    <section className='hero bg-gray-800 text-white py-20 text-center'>
+      <h1 className='text-4xl font-bold mb-4'>Welcome to C-Store</h1>
+      <p className='text-lg mb-8'>Explore the best in electronics and toys!</p>
+      <Link to="/Collection">
+        <button className='bg-yellow-500 text-black px-6 py-2 rounded-full font-medium hover:bg-yellow-600'>
+          Shop Now
+        </button>
+      </Link>
+    </section>
       
       <section className='promotions my-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
         <div className='bg-blue-200 p-6 rounded-lg text-center'>
@@ -30,10 +46,12 @@ const Home = () => {
           {/* Map over an array of featured products and display them here */}
         </div>
       </section>
+      <div>
+      <ImageSwitcher images={images} />
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
 
 export default Home;
-
- // hi i'm sukithan
