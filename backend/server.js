@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const dbConfig = {
   host: 'localhost',
   user: 'root', // replace with your MySQL username
-  password: 'Themiya1998', // replace with your MySQL password
+  password: 'Themiya####', // replace with your MySQL password
   database: 'cart', // replace with your database name
 };
 

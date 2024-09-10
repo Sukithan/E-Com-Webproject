@@ -1,3 +1,4 @@
+/*
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Cart.css";
@@ -117,8 +118,7 @@ const Cart = () => {
 };
 
 export default Cart;
-
-/*
+*/
 
 import React, { useState } from "react";
 import "./Cart.css"; // Import the CSS file
@@ -145,10 +145,10 @@ const Cart = () => {
   };
 
   const buyItem = (id) => {
-    alert(Bought ${items.find(item => item.id === id).name});
+    alert(`Bought ${items.find(item => item.id === id).name}`);
     // Logic for buying the item goes here
   };
-
+  
   const incrementQty = (id) => {
     setItems(
       items.map(item =>
@@ -221,4 +221,4 @@ const Cart = () => {
 export default Cart;
 
 
-*/
+
