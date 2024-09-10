@@ -13,6 +13,7 @@ import Laptops from "./Laptops.jpg"
 import Phone from "./Phone.jpg"
 import Television from "./Televison.jpg"
 import ToyCar from "./ToyCar.jpeg"
+import ContactUs from "./contactUs.jpg"
 
 export const assets = {
     img1, 
@@ -30,6 +31,7 @@ export const assets = {
     Phone,
     Television,
     ToyCar,
+    ContactUs,
 
 
 };

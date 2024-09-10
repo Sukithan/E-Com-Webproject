@@ -51,53 +51,52 @@ const Home = () => {
       </div>
       
       <div>
-      <Card 
-      itemName="Iphone" 
-      details="Good Product" 
-      price={20} 
-      discount={50} 
-      image="i15.jpeg" 
-      />
-      <Card 
-      itemName="MacBook" 
-      details="Good Product" 
-      price={2000} 
-      discount={5} 
-      image="mac2.webp" 
-      />
-      <Card 
-      itemName="LG Smart" 
-      details="Good Product" 
-      price={2500} 
-      discount={15} 
-      image="tv1.jpeg" 
-      />
-      <Card 
-      itemName="Samsung S24 Ultra" 
-      details="Flagship Mobile" 
-      price={1400} 
-      discount={15} 
-      image="s24.jpeg" 
-      />
-      <Card 
-      itemName="I watch" 
-      details="Series 9" 
-      price={500} 
-      discount={10} 
-      image="watch9.jpeg" 
-      />
-      <Card 
-      itemName="Car" 
-      details="Kid Product" 
-      price={100} 
-      discount={12} 
-      image="car.jpeg" 
-      />
+        <Card 
+        itemName="Iphone" 
+        details="Good Product" 
+        price={20} 
+        discount={50} 
+        image="i15.jpeg" 
+        />
+        <Card 
+        itemName="MacBook" 
+        details="Good Product" 
+        price={2000} 
+        discount={5} 
+        image="mac2.webp" 
+        />
+        <Card 
+        itemName="LG Smart" 
+        details="Good Product" 
+        price={2500} 
+        discount={15} 
+        image="tv1.jpeg" 
+        />
+        <Card 
+        itemName="Samsung S24 Ultra" 
+        details="Flagship Mobile" 
+        price={1400} 
+        discount={15} 
+        image="s24.jpeg" 
+        />
+        <Card 
+        itemName="I watch" 
+        details="Series 9" 
+        price={500} 
+        discount={10} 
+        image="watch9.jpeg" 
+        />
+        <Card 
+        itemName="Car" 
+        details="Kid Product" 
+        price={100} 
+        discount={12} 
+        image="car.jpeg" 
+        />
       </div>
 
 
     
-      <Footer></Footer>
     </div>
   );
 }
