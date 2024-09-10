@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Home from './pages/Home'
-import Collection from './pages/Collection'
+import ProductCategory from './pages/ProductCategory'
 import Cart from './pages/Cart'
 import About_us from './pages/About_us'
 import Contact from './pages/Contact'
@@ -17,7 +17,7 @@ const App = () => {
       <Navbar/>
       <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/Collection' element={<Collection/>} />
+          <Route path='/ProductCategory' element={<ProductCategory/>} />
           <Route path='/Cart' element={<Cart/>} />
           <Route path='/About_us' element={<About_us/>} />
           <Route path='/Contact' element={<Contact/>} />
