@@ -21,7 +21,7 @@ const Home = () => {
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>Welcome to C-Store</h1>
         <p className='text-lg md:text-xl mb-8'>Explore the best in electronics and toys!</p>
         <Link to="/ProductCategory">
-          <button className='bg-purple-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-yellow-600'>
+          <button className='bg-purple-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-purple-700'>
             Shop Now
           </button>
         </Link>

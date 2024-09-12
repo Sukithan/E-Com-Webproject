@@ -15,11 +15,11 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className='hidden lg:flex space-x-6 lg:text-lg'>
-          <Link to='/' className='hover:text-yellow-500 text-lg'>Home</Link>
-          <Link to='/ProductCategory' className='hover:text-yellow-500'>Our Products</Link>
-          <Link to='/Cart' className='hover:text-yellow-500'>Cart</Link>
-          <Link to='/About_us' className='hover:text-yellow-500'>About Us</Link>
-          <Link to='/Contact' className='hover:text-yellow-500'>Contact Us</Link>
+          <Link to='/' className='hover:text-indigo-400 text-lg'>Home</Link>
+          <Link to='/ProductCategory' className='hover:text-indigo-400'>Our Products</Link>
+          <Link to='/Cart' className='hover:text-indigo-400'>Cart</Link>
+          <Link to='/About_us' className='hover:text-indigo-400'>About Us</Link>
+          <Link to='/Contact' className='hover:text-indigo-400'>Contact Us</Link>
         </div>
 
         {/* Search and Icons */}
@@ -30,7 +30,7 @@ const Navbar = () => {
             placeholder='Search...' 
             className='hidden md:block px-4 py-2 rounded-md focus:outline-none text-black'
           />
-          <Link to='/Login' className='hover:text-yellow-500 text-lg'>Login</Link>
+          <Link to='/Login' className='hover:text-indigo-400 text-lg'>Login</Link>
           <div className='relative'>
             <Link to='/Cart'>
               <i className="fa-solid fa-cart-shopping text-2xl"></i> {/* Cart icon */}
