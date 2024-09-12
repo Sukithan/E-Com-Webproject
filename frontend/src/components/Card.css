@@ -5,7 +5,7 @@
     padding: 16px;
     margin: 16px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
   }
   
   .card-image {

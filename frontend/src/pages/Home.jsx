@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageSwitcher from '../components/ImageSwithcher';
-import Footer from '../components/footer';
 import Card from '../components/Card';
+import { assets } from '../assets/assets';
 
 const images = [
   '/1.jpg',
@@ -54,42 +54,42 @@ const Home = () => {
             details="Good Product" 
             price={20} 
             discount={50} 
-            image="i15.jpeg" 
+            image={assets.Phone} 
           />
           <Card 
             itemName="MacBook" 
             details="Good Product" 
             price={2000} 
             discount={5} 
-            image="mac2.webp" 
+            image={assets.Laptops} 
           />
           <Card 
             itemName="LG Smart" 
             details="Good Product" 
             price={2500} 
             discount={15} 
-            image="tv1.jpeg" 
+            image={assets.Television}
           />
           <Card 
             itemName="Samsung S24 Ultra" 
             details="Flagship Mobile" 
             price={1400} 
             discount={15} 
-            image="s24.jpeg" 
+            image={assets.Samsung_S24_Ultra} 
           />
           <Card 
             itemName="I Watch" 
             details="Series 9" 
             price={500} 
             discount={10} 
-            image="watch9.jpeg" 
+            image={assets.I_watch}
           />
           <Card 
             itemName="Car" 
             details="Kid Product" 
             price={100} 
             discount={12} 
-            image="car.jpeg" 
+            image={assets.Electric_car} 
           />
         </div>
       </section>
