@@ -14,7 +14,7 @@ import Phone from "./Phone.jpg"
 import Television from "./Televison.jpg"
 import ToyCar from "./ToyCar.jpeg"
 import ContactUs from "./contactUs.jpg"
-import Electric_car from "./Electric car.jpg"
+import Electric_car from "./Electriic car.jpg"
 import Samsung_S24_Ultra from "./Samsung S24 Ultra.jpg"
 import I_watch from "./I-watch.jpg"
 
