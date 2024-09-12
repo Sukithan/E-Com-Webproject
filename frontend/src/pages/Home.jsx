@@ -17,11 +17,11 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className='hero bg-gray-800 text-white py-20 text-center'>
+      <section className='hero bg-purple-300  text-white py-20 text-center'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>Welcome to C-Store</h1>
         <p className='text-lg md:text-xl mb-8'>Explore the best in electronics and toys!</p>
         <Link to="/ProductCategory">
-          <button className='bg-yellow-500 text-black px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-yellow-600'>
+          <button className='bg-purple-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-yellow-600'>
             Shop Now
           </button>
         </Link>

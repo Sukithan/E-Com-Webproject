@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);  
 
   return (
-    <nav className='bg-gray-800 text-white'>
+    <nav className='bg-purple-800 text-white'>
       <div className='flex items-center justify-between py-5 px-4 sm:px-8'>
         {/* Logo */}
         <div className='flex items-center space-x-4'>
@@ -14,8 +14,8 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Links */}
-        <div className='hidden md:flex space-x-6'>
-          <Link to='/' className='hover:text-yellow-500'>Home</Link>
+        <div className='hidden lg:flex space-x-6 lg:text-lg'>
+          <Link to='/' className='hover:text-yellow-500 text-lg'>Home</Link>
           <Link to='/ProductCategory' className='hover:text-yellow-500'>Our Products</Link>
           <Link to='/Cart' className='hover:text-yellow-500'>Cart</Link>
           <Link to='/About_us' className='hover:text-yellow-500'>About Us</Link>
@@ -30,7 +30,7 @@ const Navbar = () => {
             placeholder='Search...' 
             className='hidden md:block px-4 py-2 rounded-md focus:outline-none text-black'
           />
-          <Link to='/Login' className='hover:text-yellow-500'>Login</Link>
+          <Link to='/Login' className='hover:text-yellow-500 text-lg'>Login</Link>
           <div className='relative'>
             <Link to='/Cart'>
               <i className="fa-solid fa-cart-shopping text-2xl"></i> {/* Cart icon */}
@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Icon for Mobile */}
-        <div className='md:hidden'>
+        <div className='lg:hidden'>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='focus:outline-none'>
             <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'} />
@@ -54,8 +54,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className='md:hidden'>
-          <div className='flex flex-col space-y-2 px-4 py-2 bg-gray-700'>
+        <div className='lg:hidden'>
+          <div className='flex flex-col space-y-2 px-4 py-2 bg-purple-800'>
             <Link to='/' className='hover:text-yellow-500'>Home</Link>
             <Link to='/ProductCategory' className='hover:text-yellow-500'>Our Products</Link>
             <Link to='/Cart' className='hover:text-yellow-500'>Cart</Link>
