@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ImageSwitcher from '../components/ImageSwithcher';
+import ImageSwitcher from '../components/ImageSwithcher';  // Ensure correct import path
 import Card from '../components/Card';
 import { assets } from '../assets/assets';
 
@@ -15,40 +15,42 @@ const images = [
 
 const Home = () => {
   return (
-    <div>
+    <div className='flex flex-col'>
       {/* Hero Section */}
-      <section className='hero bg-purple-300  text-white py-20 text-center'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-4'>Welcome to C-Store</h1>
-        <p className='text-lg md:text-xl mb-8'>Explore the best in electronics and toys!</p>
+      <section className='hero bg-purple-300 text-white py-12 md:py-16 text-center'>
+        <h1 className='text-2xl md:text-4xl font-bold mb-4'>Welcome to C-Store</h1>
+        <p className='text-base md:text-lg mb-6'>Explore the best in electronics and toys!</p>
         <Link to="/ProductCategory">
-          <button className='bg-purple-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-purple-700'>
+          <button className='bg-purple-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-medium hover:bg-purple-700'>
             Shop Now
           </button>
         </Link>
       </section>
       
       {/* Promotions Section */}
-      <section className='promotions my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-6 rounded-lg text-center hover:scale-110 duration-300'>
-          <h2 className='text-2xl font-semibold mb-2 text-white'>New Arrivals</h2>
-          <p className='text-sm text-white'>Check out the latest products in our collection.</p>
+      <div className='promotions my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'>
+        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
+          <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>New Arrivals</h2>
+          <p className='text-sm md:text-base text-white'>Check out the latest products in our collection.</p>
         </div>
-        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-6 rounded-lg text-center hover:scale-110 duration-300'>
-          <h2 className='text-2xl font-semibold mb-2 text-white'>Best Sellers</h2>
-          <p className='text-sm text-white'>Discover the most popular items loved by our customers.</p>
+        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
+          <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>Best Sellers</h2>
+          <p className='text-sm md:text-base text-white'>Discover the most popular items loved by our customers.</p>
         </div>
-        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-6 rounded-lg text-center hover:scale-110 duration-300'>
-          <h2 className='text-2xl font-semibold mb-2 text-white'>Special Offers</h2>
-          <p className='text-sm text-white'>Don't miss out on our exclusive deals and discounts.</p>
+        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
+          <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>Special Offers</h2>
+          <p className='text-sm md:text-base text-white'>Don't miss out on our exclusive deals and discounts.</p>
         </div>
-      </section>
+      </div>
 
       {/* Featured Products Section */}
-      <section className='featured-products'>
-        <h2 className='text-3xl font-bold text-center text-purple-500'>Featured Products</h2>
-        <ImageSwitcher images={images} />
+      <div className='flex flex-col items-center mb-6 md:mb-12'>
+        <h2 className='text-xl md:text-2xl font-bold text-center text-purple-500 mb-4 md:mb-6'>Featured Products</h2>
+        <div className='w-full max-w-4xl mb-4 md:mb-6'>
+          <ImageSwitcher images={images} />
+        </div>
         {/* Product Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           <Card 
             itemName="Iphone" 
             details="Good Product" 
@@ -92,7 +94,7 @@ const Home = () => {
             image={assets.Electric_car} 
           />
         </div>
-      </section>
+      </div>
     </div>
   );
 }
