@@ -33,12 +33,13 @@ const Navbar = () => {
           <Link to='/Login' className='hover:text-yellow-500'>Login</Link>
           <div className='relative'>
             <Link to='/Cart'>
-              <svg className='w-8 h-8' fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l1-7H6.4m-1.4 9h16m-9-3h6a1 1 0 011 1v3a1 1 0 01-1 1h-7a1 1 0 01-1-1v-4z" />
-              </svg>
+              <i className="fa-solid fa-cart-shopping text-2xl"></i> {/* Cart icon */}
             </Link>
-            <span className='absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full'>3</span>
+            <span className='absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full transform translate-x-1/2 -translate-y-1/2'>
+              3
+           </span>
           </div>
+
         </div>
 
         {/* Hamburger Icon for Mobile */}

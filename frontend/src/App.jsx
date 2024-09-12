@@ -11,6 +11,7 @@ import Product from './pages/Product'
 import Order from './pages/Order'
 import Navbar from './components/Navbar'
 import Footer from './components/footer'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
   return (

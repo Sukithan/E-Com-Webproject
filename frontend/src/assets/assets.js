@@ -2,7 +2,7 @@ import img1 from './1.jpg';
 import img2 from './2.jpeg';
 import img3 from './3.jpeg';
 import img4 from './4.jpeg';
-import Storelogo from './Storelogo.png'
+import Storelogo from './Logo.jpeg'
 import drop_down_arrow from "./drop-down-arrow.png"
 import Camera from "./Camera.jpg"
 import Earpods from "./Earpods.jpeg"
