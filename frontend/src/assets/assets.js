@@ -17,6 +17,7 @@ import ContactUs from "./contactUs.jpg"
 import Electric_car from "./Electriic car.jpg"
 import Samsung_S24_Ultra from "./Samsung S24 Ultra.jpg"
 import I_watch from "./I-watch.jpg"
+import Login_bg from "./Login_bg.jpg"
 
 export const assets = {
     img1, 
@@ -38,6 +39,7 @@ export const assets = {
     Electric_car,
     Samsung_S24_Ultra,
     I_watch,
+    Login_bg,
 
 
 
