@@ -46,7 +46,7 @@ export const assets = {
 };
 export const products = [
     {
-        _id: "aaaaa",
+        _id: "1",
         name: "Camera",
         description: "A high-resolution digital camera with advanced features for capturing detailed images and videos. Ideal for photography enthusiasts and professionals.",
         price: 100,
@@ -57,7 +57,7 @@ export const products = [
         bestseller: true
     },
     {
-        _id: "aaaab",
+        _id: "2",
         name: "Ear-Pods",
         description: "Wireless earphones with high-quality sound and a comfortable fit. Perfect for listening to music or taking calls on the go.",
         price: 200,
@@ -68,7 +68,7 @@ export const products = [
         bestseller: true
     },
     {
-        _id: "aaaac",
+        _id: "3",
         name: "Table Fan",
         description: "A compact and efficient table fan that provides cool and refreshing air. Ideal for use in small rooms or at your desk.",
         price: 220,
@@ -79,7 +79,7 @@ export const products = [
         bestseller: true
     },
     {
-        _id: "aaaad",
+        _id: "4",
         name: "Headsets",
         description: "Comfortable and high-quality headsets with excellent sound clarity. Suitable for gaming, calls, or enjoying music.",
         price: 110,
@@ -90,7 +90,7 @@ export const products = [
         bestseller: true
     },
     {
-        _id: "aaaae",
+        _id: "5",
         name: "Ipad",
         description: "A versatile tablet with a high-resolution display and powerful performance. Perfect for productivity, entertainment, and creativity.",
         price: 130,
@@ -101,7 +101,7 @@ export const products = [
         bestseller: true
     },
     {
-        _id: "aaaaf",
+        _id: "6",
         name: "Laptops",
         description: "A high-performance laptop designed for both work and play. Features a fast processor, ample storage, and a sleek design.",
         price: 140,
@@ -112,7 +112,7 @@ export const products = [
         bestseller: true
     },
     {
-        _id: "aaaag",
+        _id: "7",
         name: "Phone",
         description: "A modern smartphone with a large screen, powerful camera, and fast processing capabilities. Ideal for everyday use and staying connected.",
         price: 190,
@@ -123,7 +123,7 @@ export const products = [
         bestseller: false
     },
     {
-        _id: "aaaah",
+        _id: "8",
         name: "Television",
         description: "A high-definition television with vibrant colors and sharp images. Perfect for enjoying movies, shows, and games.",
         price: 140,
@@ -134,7 +134,7 @@ export const products = [
         bestseller: false
     },
     {
-        _id: "aaaai",
+        _id: "9",
         name: "Electric Car",
         description: "A remote-controlled electric car with dynamic features and high performance. Great for kids and enthusiasts alike.",
         price: 100,
