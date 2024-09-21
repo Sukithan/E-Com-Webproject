@@ -14,93 +14,93 @@ const Login = () => {
       alert('Passwords do not match!');
       return;
     }
-    
   };
 
   return (
-    <div className='flex justify-center items-center h-screen bg-gray-100' style={{ backgroundImage: 'url("src/assets/Login_bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="flex flex-col sm:gap-7 lg:gap-2 lg:flex-row justify-center items-center my-4 min-h-screen" style={{ backgroundImage: 'url("src/assets/Login_bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Left Side - Welcome Text */}
-      <div className='text-left text-white w-1/2 flex flex-col justify-center' style={{marginLeft:'80px',marginRight:'auto'}}>
-          <h1 className='text-6xl font-bold mb-4'>Welcome to C-Store</h1>
-          <p className='text-3xl'>Your Local retailer is now Online!</p>
-        </div>
+      <div className="text-center lg:text-left text-white mx-3 flex flex-col justify-center" >
+        <h1 className="text-4xl sm:text-4xl lg:text-6xl font-bold mb-4">Welcome to <br/> C-Store</h1>
+        <p className="text-2xl sm:text-2xl">Your Local retailer is now Online!</p>
+      </div>
 
-      <div className='bg-white shadow-2xl rounded-2xl p-8 max-w-lg w-full' style={{ marginLeft: 'auto', marginRight: '20px' }}>
-        <h2 className='text-2xl font-bold mb-8 text-center text-gray-700'>{currentState}</h2>
-
+      {/* Right Side - Form */}
+      <div className="bg-white shadow-2xl rounded-2xl p-8 sm:w-2/3 lg:w-1/2 m-5">
+        <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center text-gray-700">{currentState}</h2>
         {currentState === 'Sign up' && (
-          <div className='mb-4'>
-            <label className='block text-sm font-medium text-gray-700 mb-2'>Username</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
             <input
-              type='text'
+              type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500'
-              placeholder='Enter your username'
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
+              placeholder="Enter your username"
               required
             />
           </div>
         )}
 
-        <div className='mb-4'>
-          <label className='block text-sm font-medium text-gray-700 mb-2'>Email</label>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
           <input
-            type='email'
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500'
-            placeholder='Enter your email'
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
+            placeholder="Enter your email"
             required
           />
         </div>
 
-        <div className='mb-6'>
-          <label className='block text-sm font-medium text-gray-700 mb-2'>Password</label>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
           <input
-            type='password'
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500'
-            placeholder='Enter your password'
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
+            placeholder="Enter your password"
             required
           />
         </div>
 
-  
-
-            {currentState === 'Sign up' && (
-          <div className='mb-6'>
-          <label className='block text-sm font-medium text-gray-700 mb-2'>Confirm Password</label>
-          <input
-            type='password'
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500'
-            placeholder='Confirm your password'
-            required
-          />
-        </div>
+        {currentState === 'Sign up' && (
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
         )}
 
-        <div className='mb-8 text-right'>
-          {currentState === 'Login' ?
-            <p className='text-sm text-gray-600'>New here? <a className='text-indigo-500 cursor-pointer' onClick={() => setCurrentState('Sign up')}>Sign up</a></p>
-            : <p className='text-sm text-gray-600'>Already have an account? <a className='text-indigo-500 cursor-pointer' onClick={() => setCurrentState('Login')}>Login</a></p>
-          }
+        <div className="mb-8 text-right">
+          {currentState === 'Login' ? (
+            <p className="text-sm text-gray-600">
+              New here? <span className="text-indigo-500 cursor-pointer" onClick={() => setCurrentState('Sign up')}>Sign up</span>
+            </p>
+          ) : (
+            <p className="text-sm text-gray-600">
+              Already have an account? <span className="text-indigo-500 cursor-pointer" onClick={() => setCurrentState('Login')}>Login</span>
+            </p>
+          )}
         </div>
 
         <button
-          type='submit'
-          className='w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-md transition duration-300'
+          type="submit"
+          className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-md transition duration-300"
+          onClick={handleLogin}
         >
           {currentState === 'Login' ? 'Login' : 'Sign up'}
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default Login;
-
-
-
