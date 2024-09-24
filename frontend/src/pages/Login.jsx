@@ -14,6 +14,28 @@ const Login = () => {
       alert('Passwords do not match!');
       return;
     }
+    else if(currentState === 'Sign up' && validatePassword(password)){
+      //Ok proceed sign up..
+    }
+    else{
+      return;
+    }
+  };
+
+  const validatePassword = (password) => {
+    const minLength = 8;
+    const hasNumber = /\d/;
+    const hasUpperCase = /[A-Z]/;
+    const hasLowerCase = /[a-z]/;
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+
+    if (password.length < minLength || !hasNumber.test(password) || !hasUpperCase.test(password) || !hasLowerCase.test(password) || !hasSpecialChar.test(password)) {
+      alert('Password must be at least 8 characters long.\nmust contain,\n :at least one number.\n :at least one uppercase letter.\n :at least one lowercase letter.\n :at least one special character.');
+      return false;
+    }
+    else{
+      return true;
+    }
   };
 
   return (
