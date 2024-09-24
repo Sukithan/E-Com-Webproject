@@ -25,7 +25,7 @@ const Login = () => {
       </div>
 
       {/* Right Side - Form */}
-      <div className="bg-white shadow-2xl rounded-2xl p-8 sm:w-2/3 lg:w-1/2 m-5">
+      <form onSubmit={(e) => handleLogin(e)} className="bg-white shadow-2xl rounded-2xl p-8 sm:w-2/3 lg:w-1/2 m-5">
         <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center text-gray-700">{currentState}</h2>
         {currentState === 'Sign up' && (
           <div className="mb-4">
@@ -94,11 +94,10 @@ const Login = () => {
         <button
           type="submit"
           className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-md transition duration-300"
-          onClick={handleLogin}
         >
           {currentState === 'Login' ? 'Login' : 'Sign up'}
         </button>
-      </div>
+      </form>
     </div>
   );
 };
