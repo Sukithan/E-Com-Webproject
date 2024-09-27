@@ -7,14 +7,14 @@ const Navbar = () => {
 
   return (
     <nav className='bg-purple-800 text-white'>
-      <div className='flex items-center justify-between py-5 px-4 sm:px-8'>
+      <div className='flex items-center justify-between py-5 px-4 sm:px-5'>
         {/* Logo */}
-        <div className='flex items-center space-x-4'>
-          <img src={assets.Storelogo} className='w-40' alt="Store Logo" />
+        <div className='flex items-center space-x-5'>
+          <img src={assets.Storelogo} className='w-32' alt="Store Logo" />
         </div>
 
         {/* Desktop Links */}
-        <div className='hidden lg:flex space-x-6 lg:text-lg'>
+        <div className='hidden lg:flex space-x-5 lg:text-lg'>
           <Link to='/' className='hover:text-indigo-400 text-lg'>Home</Link>
           <Link to='/ProductCategory' className='hover:text-indigo-400'>Our Products</Link>
           <Link to='/Cart' className='hover:text-indigo-400'>Cart</Link>
@@ -23,14 +23,14 @@ const Navbar = () => {
         </div>
 
         {/* Search and Icons */}
-        <div className='flex items-center space-x-4'>
+        <div className='flex items-center space-x-3'>
           {/* Hide Search Bar on Small Screens */}
           <input 
             type='text' 
             placeholder='Search...' 
-            className='hidden md:block px-4 py-2 rounded-md focus:outline-none text-black'
+            className='hidden sm:block px-4 py-2 rounded-md focus:outline-none text-black'
           />
-          <Link to='/Login' className='hover:text-indigo-400 text-lg'>Login</Link>
+          <Link to='/Login' className='hover:text-indigo-400 text-lg hidden sm:block'>Login</Link>
           <div className='relative'>
             <Link to='/Cart'>
               <i className="fa-solid fa-cart-shopping text-2xl"></i> {/* Cart icon */}

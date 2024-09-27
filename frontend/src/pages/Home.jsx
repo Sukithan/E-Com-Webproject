@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import ImageSwitcher from '../components/ImageSwithcher';  // Ensure correct import path
+import ImageSwitcher from '../components/ImageSwithcher';  
 import Card from '../components/Card';
 import { assets } from '../assets/assets';
+import { ShopContext } from '../Context/ShopContext';
 
 const images = [
   '/1.jpg',
@@ -10,10 +11,28 @@ const images = [
   '/mac2.webp',
   '/car.jpg',
   '/teddy.jpeg',
-  // Add more image paths as needed
 ];
 
 const Home = () => {
+  const { 
+    productCategoriesOne, 
+    productCategoriesTwo, 
+    productCategoriesThree, 
+    productCategoriesEight, 
+    productCategoriesNine, 
+    productCategoriesFive 
+  } = useContext(ShopContext);
+
+  // Select one product from each category
+  const productCategories = [
+    productCategoriesOne[0], 
+    productCategoriesTwo[0], 
+    productCategoriesThree[2], 
+    productCategoriesEight[0], 
+    productCategoriesNine[3], 
+    productCategoriesFive[2] 
+  ].filter(product => product); 
+
   return (
     <div className='flex flex-col'>
       {/* Hero Section */}
@@ -29,18 +48,13 @@ const Home = () => {
       
       {/* Promotions Section */}
       <div className='promotions my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'>
-        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
-          <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>New Arrivals</h2>
-          <p className='text-sm md:text-base text-white'>Check out the latest products in our collection.</p>
-        </div>
-        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
-          <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>Best Sellers</h2>
-          <p className='text-sm md:text-base text-white'>Discover the most popular items loved by our customers.</p>
-        </div>
-        <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
-          <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>Special Offers</h2>
-          <p className='text-sm md:text-base text-white'>Don't miss out on our exclusive deals and discounts.</p>
-        </div>
+        {/* Promotion Cards */}
+        {['New Arrivals', 'Best Sellers', 'Special Offers'].map((title, index) => (
+          <div key={index} className='bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 p-4 md:p-6 rounded-lg text-center hover:scale-105 duration-300'>
+            <h2 className='text-lg md:text-xl font-semibold mb-2 text-white'>{title}</h2>
+            <p className='text-sm md:text-base text-white'>Check out the latest products in our collection.</p>
+          </div>
+        ))}
       </div>
 
       {/* Featured Products Section */}
@@ -49,50 +63,18 @@ const Home = () => {
         <div className='w-full max-w-4xl mb-4 md:mb-6'>
           <ImageSwitcher images={images} />
         </div>
+        
         {/* Product Cards */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-          <Card 
-            itemName="Iphone" 
-            details="Good Product" 
-            price={20} 
-            discount={50} 
-            image={assets.Phone} 
-          />
-          <Card 
-            itemName="MacBook" 
-            details="Good Product" 
-            price={2000} 
-            discount={5} 
-            image={assets.Laptops} 
-          />
-          <Card 
-            itemName="LG Smart" 
-            details="Good Product" 
-            price={2500} 
-            discount={15} 
-            image={assets.Television}
-          />
-          <Card 
-            itemName="Samsung S24 Ultra" 
-            details="Flagship Mobile" 
-            price={1400} 
-            discount={15} 
-            image={assets.Samsung_S24_Ultra} 
-          />
-          <Card 
-            itemName="I Watch" 
-            details="Series 9" 
-            price={500} 
-            discount={10} 
-            image={assets.I_watch}
-          />
-          <Card 
-            itemName="Car" 
-            details="Kid Product" 
-            price={100} 
-            discount={12} 
-            image={assets.Electric_car} 
-          />
+          {productCategories.map((product, index) => (
+            <Card 
+              key={index} 
+              itemName={product.name} 
+              details={"Good Product"} 
+              price={product.price} 
+              image={product.image} 
+            />
+          ))}
         </div>
       </div>
     </div>

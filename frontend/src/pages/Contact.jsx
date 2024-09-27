@@ -10,35 +10,40 @@ const Contact = () => {
         <Title text1={"CONTACT"} text2={"US"} />
       </div>
 
+      {/* Image */}
+      <div className='flex flex-col justify-center items-center mb-6'> 
+        <img 
+              className="w-full md:w-1/2 m-5 rounded"
+              src={assets.ContactUs} 
+              alt="Contact Us Background" 
+        />
+      </div>
+
       {/* Contact Information & Form */}
-      <div className='my-10 flex flex-col md:flex-row justify-between gap-10 mb-28'>
-        
+      <div className='my-10 flex flex-col md:flex-row justify-between gap-10'>
         {/* Left Side: Contact Information */}
-        <div className='relative w-full md:w-1/3 p-20 bg-black rounded-lg shadow-lg shadow-black overflow-hidden'>
-          {/* Background Image */}
-          <img 
-            className="absolute inset-0 w-full h-full object-cover opacity-60"
-            src={assets.ContactUs} 
-            alt="Contact Us Background" 
-          />
-          
+        <div className='relative w-full md:w-1/2 p-6 md:p-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg shadow-lg shadow-black overflow-hidden'>
+  
           {/* Content on top of the background */}
-          <div className='relative z-10 flex flex-col gap-4 justify-center text-center md:text-left'>
-            <p className='font-bold text-4xl text-white'>Our Store</p>
-            <p className='text-xl font-semibold text-white'>
-              2536/2, Welawathe, <br />
-              Colombo-6
+          <div className='flex flex-col gap-4 items-center text-center'>
+            <p className='font-bold text-xl md:text-3xl text-white'>Our Store</p>
+            <p className='text-base md:text-lg font-semibold text-white'>
+              <i className="fa-solid fa-location-dot"></i> 2536/2, Welawathe, Colombo-6
             </p>
-            <p className='text-xl font-semibold text-white'>
-              Tel: 077 0890 678 <br />
-              Email: fgfzsgfsga@gmail.com
+            <p className='text-base md:text-lg font-semibold text-white'>
+              <i className="fa-solid fa-phone"></i> Tel: 077 0890 678
             </p>
-            <p className='text-xl font-semibold text-white'>Careers at Forever</p>
+            <p className='text-base md:text-lg font-semibold text-white'>
+              <i className="fa-solid fa-envelope"></i> Email: fgfzsgfsga@gmail.com
+            </p>
+            <p className='text-base md:text-lg font-semibold text-white'>
+              <i className="fa-solid fa-lightbulb"></i> Careers at Forever
+            </p>
           </div>
         </div>
 
         {/* Right Side: Contact Form */}
-        <div className='bg-gray-100 p-8 rounded-lg shadow-lg shadow-black w-full md:w-2/3'>
+        <div className='bg-gray-100 p-6 md:p-8 rounded-lg shadow-lg shadow-black w-full md:w-2/3'>
           <h3 className='text-2xl font-semibold mb-4 text-center'>Get in Touch</h3>
           <form className='flex flex-col gap-6'>
             <input 
@@ -60,7 +65,7 @@ const Contact = () => {
             ></textarea>
             <button 
               type='submit' 
-              className='bg-rose-600 text-white py-3 rounded-md hover:bg-rose-800 transition duration-200'
+              className='bg-pink-600 text-white py-3 rounded-md hover:bg-pink-800 transition duration-200'
             >
               Send Message
             </button>

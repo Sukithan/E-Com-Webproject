@@ -1,14 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Product1 from '../components/Product1';
-import Product2 from '../components/Product2';
-import Product3 from '../components/Product3';
-import Product4 from '../components/Product4';
-import Product5 from '../components/Product5';
-import Product6 from '../components/Product6';
-import Product7 from '../components/Product7';
-import Product8 from '../components/Product8';
-import Product9 from '../components/Product9';
+import Product1 from '../products/Product1';
+import Product2 from '../products/Product2';
+import Product3 from '../products/Product3';
+import Product4 from '../products/Product4';
+import Product5 from '../products/Product5';
+import Product6 from '../products/Product6';
+import Product7 from '../products/Product7';
+import Product8 from '../products/Product8';
+import Product9 from '../products/Product9';
+import Product10 from '../products/Product10';
 
 const Product = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const Product = () => {
       {id === '7' && <Product7 />}
       {id === '8' && <Product8 />}
       {id === '9' && <Product9 />}
+      {id === '10' && <Product10 />}
       {/* {id === '2' && <Product2 />} */}
       {/* Add conditions for more products */}
     </>

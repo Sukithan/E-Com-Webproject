@@ -16,6 +16,7 @@
   
 .card-content {
     padding: 16px;
+    margin-bottom: 10px;
 }
   
 .card-title {
@@ -29,11 +30,10 @@
 }
   
 .card-price {
-    text-decoration: line-through;
     color: #999;
 }
   
-.card-discount {
+/* .card-discount {
     color: #e74c3c;
     font-weight: bold;
 }
@@ -42,5 +42,5 @@
     color: #27ae60;
     font-size: 1.2em;
     font-weight: bold;
-}
+} */
   
