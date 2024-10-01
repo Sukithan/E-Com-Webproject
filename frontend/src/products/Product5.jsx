@@ -16,7 +16,7 @@ const Product5 = () => {
   }, [productCategoriesFive]);
 
   return (
-    <div className='border-t-2 pt-10 mb-5 transition-opacity ease-in duration-500 opacity-100'>
+    <div className='border-t-2 p-10 mb-5 transition-opacity ease-in duration-500 opacity-100'>
       {/* Iterate over the products and render each one */}
       {products.map((product, index) => (
         <div key={index}>
