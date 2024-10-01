@@ -39,7 +39,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col sm:gap-7 lg:gap-2 lg:flex-row justify-center items-center my-4 min-h-screen" style={{ backgroundImage: 'url("src/assets/Login_bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="flex flex-col sm:gap-7 lg:gap-2 lg:flex-row justify-center items-center  min-h-screen" style={{ backgroundImage: 'url("src/assets/Login_bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Left Side - Welcome Text */}
       <div className="text-center lg:text-left text-white mx-3 flex flex-col justify-center" >
         <h1 className="text-4xl sm:text-4xl lg:text-6xl font-bold mb-4">Welcome to <br/> C-Store</h1>

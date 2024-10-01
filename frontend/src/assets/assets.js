@@ -22,6 +22,7 @@ import BluetoothSpeaker from "./BluetoothSpeaker.jpeg"
 import Smartwatch from "./Smartwatch.jpeg"
 import Star from "./star.png"
 import Rating from "./rating.png"
+import ProfilePicIcon from "./ProfilePicIcon.png"
 
 export const assets = {
     img1, 
@@ -48,6 +49,7 @@ export const assets = {
     Smartwatch,
     Star,
     Rating,
+    ProfilePicIcon,
     
 };
 
