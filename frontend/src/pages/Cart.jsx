@@ -1,127 +1,4 @@
-/*
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./Cart.css";
-
-const Cart = () => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    // Fetch cart items from the server when the component loads
-    axios.get('http://localhost:5000/cart-items')
-      .then(response => {
-        setItems(response.data);
-      })
-      .catch(error => console.error('Error fetching cart items:', error));
-  }, []);
-
-  const toggleButtons = (id) => {
-    setItems(
-      items.map(item =>
-        item.id === id ? { ...item, showButtons: !item.showButtons } : item
-      )
-    );
-  };
-
-  const removeItem = (id) => {
-    axios.delete(`http://localhost:5000/cart-items/${id}`)
-      .then(() => {
-        setItems(items.filter(item => item.id !== id));
-      })
-      .catch(error => console.error('Error removing item:', error));
-  };
-
-  const buyItem = (id) => {
-    alert(`Bought ${items.find(item => item.id === id).name}`);
-    // Handle buy item logic here
-  };
-
-  const incrementQty = (id) => {
-    const item = items.find(item => item.id === id);
-    axios.put(`http://localhost:5000/cart-items/${id}`, { qty: item.qty + 1 })
-      .then(() => {
-        setItems(
-          items.map(item =>
-            item.id === id ? { ...item, qty: item.qty + 1 } : item
-          )
-        );
-      })
-      .catch(error => console.error('Error incrementing qty:', error));
-  };
-
-  const decrementQty = (id) => {
-    const item = items.find(item => item.id === id);
-    if (item.qty > 1) {
-      axios.put(`http://localhost:5000/cart-items/${id}`, { qty: item.qty - 1 })
-        .then(() => {
-          setItems(
-            items.map(item =>
-              item.id === id ? { ...item, qty: item.qty - 1 } : item
-            )
-          );
-        })
-        .catch(error => console.error('Error decrementing qty:', error));
-    }
-  };
-
-  const total = items.reduce((acc, item) => acc + item.price * item.qty, 0);
-
-  return (
-    <div className="cart-container">
-      <div className="cart-header">
-        <div className="pic">
-          <img src="cart.jpeg" alt="Cart" />
-        </div>
-        <h2 className="cart-title">Shopping Cart</h2>
-      </div>
-      <div className="cart-table">
-        <div className="cart-headings">
-          <span>QTY</span>
-          <span>Item</span>
-          <span>Unit Price</span>
-          <span>Total Price</span>
-          <span></span>
-        </div>
-        <div className="cart-items">
-          {items.map(item => (
-            <div key={item.id} className="cart-item">
-              <div className="item-details">
-                <div className="qty-controls">
-                  <button onClick={() => decrementQty(item.id)}>-</button>
-                  <span>{item.qty}</span>
-                  <button onClick={() => incrementQty(item.id)}>+</button>
-                </div>
-                <span>{item.name}</span>
-                <span>${item.price.toFixed(2)}</span>
-                <span>${(item.price * item.qty).toFixed(2)}</span>
-                <button onClick={() => toggleButtons(item.id)}>&#x25BC;</button>
-              </div>
-              {item.showButtons && (
-                <div className="item-actions">
-                  <button onClick={() => removeItem(item.id)}>Remove Item</button>
-                  <button onClick={() => buyItem(item.id)}>Buy</button>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="cart-footer">
-        <div className="total">
-          <span>Total:</span>
-          <span>${total.toFixed(2)}</span>
-        </div>
-        <button className="order-button">ORDER</button>
-      </div>
-    </div>
-  );
-};
-
-export default Cart;
-*/
-
 import React, { useState } from "react";
-import "./Cart.css"; // Import the CSS file
 
 const Cart = () => {
   const [items, setItems] = useState([
@@ -168,57 +45,69 @@ const Cart = () => {
   const total = items.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   return (
-    <div className="cart-container">
-      <div className="cart-header">
-        <div className="pic">
-          <img src="cart.jpeg" alt="Cart" />
-        </div>
-        <h2 className="cart-title">Shopping Cart</h2>
+    <div className="flex flex-col items-center w-full max-w-4xl mx-auto bg-purple-200 p-6 rounded-lg shadow-lg m-5">
+      {/* Cart Header */}
+      <div className="flex items-center w-full mb-6">
+        <h2 className="text-3xl font-bold text-purple-800 text-center flex-1">SHOPPING CART</h2>
       </div>
-      <div className="cart-table">
-        <div className="cart-headings">
-          <span>QTY</span>
-          <span>Item</span>
-          <span>Unit Price</span>
-          <span>Total Price</span>
-          <span></span>
-        </div>
-        <div className="cart-items">
-          {items.map(item => (
-            <div key={item.id} className="cart-item">
-              <div className="item-details">
-                <div className="qty-controls">
-                  <button onClick={() => decrementQty(item.id)}>-</button>
-                  <span>{item.qty}</span>
-                  <button onClick={() => incrementQty(item.id)}>+</button>
-                </div>
-                <span>{item.name}</span>
-                <span>${item.price.toFixed(2)}</span>
-                <span>${(item.price * item.qty).toFixed(2)}</span>
-                <button onClick={() => toggleButtons(item.id)}>&#x25BC;</button>
+      
+      {/* Cart Table Header */}
+      <div className="w-full flex justify-between p-3 bg-purple-300 rounded-lg mb-4 text-purple-900 font-semibold">
+        <span className="flex-1 text-center">Quantity</span>
+        <span className="flex-1 text-center">Item</span>
+        <span className="flex-1 text-center">Unit Price</span>
+        <span className="flex-1 text-center">Total Price</span>
+        <span></span>
+      </div>
+      
+      {/* Cart Items */}
+      <div className="w-full">
+        {items.map(item => (
+          <div key={item.id} className="bg-white mb-4 p-4 rounded-lg shadow-md">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center">
+                <button 
+                  onClick={() => decrementQty(item.id)} 
+                  className="bg-gray-300 p-2 rounded-md"
+                >-</button>
+                <span className="mx-4">{item.qty}</span>
+                <button 
+                  onClick={() => incrementQty(item.id)} 
+                  className="bg-gray-300 p-2 rounded-md"
+                >+</button>
               </div>
-              {item.showButtons && (
-                <div className="item-actions">
-                  <button onClick={() => removeItem(item.id)}>Remove Item</button>
-                  <button onClick={() => buyItem(item.id)}>Buy</button>
-                </div>
-              )}
+              <span className="flex-1 text-center">{item.name}</span>
+              <span className="flex-1 text-center">${item.price.toFixed(2)}</span>
+              <span className="flex-1 text-center">${(item.price * item.qty).toFixed(2)}</span>
+              <button 
+                onClick={() => toggleButtons(item.id)} 
+                className="text-lg"
+              >&#x25BC;</button>
             </div>
-          ))}
-        </div>
+            
+            {item.showButtons && (
+              <div className="flex justify-between mt-4">
+                <button 
+                  onClick={() => removeItem(item.id)} 
+                  className="bg-red-500 text-white px-4 py-2 rounded-md"
+                >Remove Item</button>
+                <button 
+                  onClick={() => buyItem(item.id)} 
+                  className="bg-green-500 text-white px-4 py-2 rounded-md"
+                >Buy</button>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-      <div className="cart-footer">
-        <div className="total">
-          <span>Total:</span>
-          <span>${total.toFixed(2)}</span>
-        </div>
-        <button className="order-button" >ORDER</button>
+      
+      {/* Cart Footer */}
+      <div className="flex justify-between w-full mt-6">
+        <div className="text-lg font-bold">Total: ${total.toFixed(2)}</div>
+        <button className="bg-violet-500 text-white px-6 py-2 rounded-md">ORDER</button>
       </div>
     </div>
   );
 };
 
 export default Cart;
-
-
-

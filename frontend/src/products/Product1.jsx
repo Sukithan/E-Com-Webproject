@@ -3,12 +3,12 @@ import { ShopContext } from "../Context/ShopContext";
 import { assets } from '../assets/assets';
 
 const Product1 = () => {
-  const { productCategoriesOne, currency } = useContext(ShopContext);
+  const { productCategoriesOne, currency, addToCart } = useContext(ShopContext);
   const [products, setProducts] = useState([]);
 
-  // Fetch all products
   const fetchProductData = async () => {
-    setProducts(productCategoriesOne);  // Set the entire product list in state
+    setProducts(productCategoriesOne);  
+    // Set the entire product list in state
   }
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Product1 = () => {
               <p className='mt-5 text-gray-500'>Available products count: {product.count}</p>
               <p className='mt-5 text-3xl font-medium'>{currency}{product.price}</p>
               <p className='mt-5 text-gray-500 md:w-4/5'>{product.description}</p>
-              <button className='bg-purple-700 text-white px-8 py-3 active:bg-purple-300 my-4'>ADD TO CART</button>
+              <button className='bg-purple-700 text-white px-8 py-3 active:bg-purple-300 my-4' onClick={() => addToCart(product._id)}>ADD TO CART</button>
               <div className='text-gray-500 mt-5 flex flex-col gap-1'>
                 <p>100% Original Product</p>
                 <p>Cash on delivery available on this product</p>

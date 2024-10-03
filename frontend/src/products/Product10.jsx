@@ -3,7 +3,7 @@ import { ShopContext } from "../Context/ShopContext";
 import { assets } from '../assets/assets';
 
 const Product10 = () => {
-  const { productCategoriesTen, currency } = useContext(ShopContext);
+  const { productCategoriesTen, currency, addToCart } = useContext(ShopContext);
   const [products, setProducts] = useState([]);
 
   // Fetch all products
@@ -42,7 +42,7 @@ const Product10 = () => {
               <p className='mt-5 text-gray-500'>Available products count: {product.count}</p>
               <p className='mt-5 text-3xl font-medium'>{currency}{product.price}</p>
               <p className='mt-5 text-gray-500 md:w-4/5'>{product.description}</p>
-              <button className='bg-black text-white px-8 py-3 active:bg-gray-700 my-4'>ADD TO CART</button>
+              <button onClick={() => addToCart(product._id)} className='bg-purple-700 text-white px-8 py-3 active:bg-gray-700 my-4'>ADD TO CART</button>
               <div className='text-gray-500 mt-5 flex flex-col gap-1'>
                 <p>100% Original Product</p>
                 <p>Cash on delivery available on this product</p>

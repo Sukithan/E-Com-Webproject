@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState,useContext,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { assets } from '../assets/assets';
+import { ShopContext } from "../Context/ShopContext";
 
 const Navbar = () => {
+  const { getCartCount } = useContext(ShopContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const fetchCartCount = async () => {
+      const count = await getCartCount();
+      setCartCount(count); 
+    };
+
+    fetchCartCount();
+  }, [getCartCount]);
 
   return (
     <nav className='bg-purple-800 text-white'>
@@ -40,7 +52,7 @@ const Navbar = () => {
               <i className="fa-solid fa-cart-shopping text-2xl"></i> {/* Cart icon */}
             </Link>
             <span className='absolute -top-1 -right-1 inline-flex items-center justify-center px-1 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full'>
-              3
+            {cartCount}
             </span>
           </div>
 
