@@ -58,7 +58,9 @@ const Navbar = () => {
 
           {/* Profile Icon */}
           <div>
+            <Link to='/Profile'>
             <img src={assets.ProfilePicIcon} alt="Profile Icon" className='mr-2 w-10 h-10 rounded-full cursor-pointer'/>
+            </Link>
           </div>
         </div>
 
@@ -82,6 +84,7 @@ const Navbar = () => {
             <Link to='/About_us' className='hover:text-yellow-500'>About Us</Link>
             <Link to='/Contact' className='hover:text-yellow-500'>Contact Us</Link>
             <Link to='/Login' className='hover:text-yellow-500'>Login</Link>
+            <Link to='/Profile' className='hover:text-yellow-500'>Profile</Link>
           </div>
         </div>
       )}

@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Place_order from './pages/Place_order';
 import Product from './pages/Product';
 import Order from './pages/Order';
+import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='/Place_order' element={<Place_order />} />
         <Route path='/Product/:id' element={<Product />} />
         <Route path='/Order' element={<Order />} />
+        <Route path='/Profile' element={<Profile />} />
       </Routes>
       <Footer />
     </div>
