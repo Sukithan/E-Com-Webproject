@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  //const [username, setUsername] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -51,17 +53,33 @@ const Login = () => {
         <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center text-gray-700">{currentState}</h2>
         {currentState === 'Sign up' && (
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Firstname</label>
             <input
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
-              placeholder="Enter your username"
+              placeholder="Enter your Firstname"
               required
             />
           </div>
         )}
+
+{currentState === 'Sign up' && (
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Lastname</label>
+            <input
+              type="text"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
+              placeholder="Enter your Lastname"
+              required
+            />
+          </div>
+        )}
+
+
 
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
