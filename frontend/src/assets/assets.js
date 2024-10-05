@@ -23,6 +23,7 @@ import Smartwatch from "./Smartwatch.jpeg"
 import Star from "./star.png"
 import Rating from "./rating.png"
 import ProfilePicIcon from "./ProfilePicIcon.png"
+import Person from "./Person.jpg"
 
 export const assets = {
     img1, 
@@ -50,6 +51,7 @@ export const assets = {
     Star,
     Rating,
     ProfilePicIcon,
+    Person,
     
 };
 

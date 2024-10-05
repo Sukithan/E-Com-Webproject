@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { products,productCategoriesOne,productCategoriesTwo,productCategoriesThree, productCategoriesFour,productCategoriesFive,productCategoriesSix,productCategoriesSeven,productCategoriesEight,productCategoriesNine,productCategoriesTen, } from '../assets/assets'; 
 import {toast} from "react-toastify"
+import {productsItems} from "../assets/assets2"
 
 export const ShopContext = createContext();
 
@@ -10,11 +11,10 @@ const ShopContextProvider = (props) => {
     const delivery_fee = 10;
 
     const addToCart = async (itemId) => {
-
-        if(true){
+        if (true) {
             toast.error("You have Selected");
         }
-
+    
         let cartData = { ...cartItems };
     
         if (cartData[itemId]) {
@@ -24,7 +24,8 @@ const ShopContextProvider = (props) => {
         }
     
         setCartItems(cartData);
-    };
+        console.log('Current cart items:', cartData); // Debug log
+    };    
 
     const getCartCount = async () => {
         let count = 0; 
@@ -64,6 +65,7 @@ const ShopContextProvider = (props) => {
         addToCart,
         cartItems,
         getCartCount,
+        productsItems
 
     };
 
