@@ -18,7 +18,7 @@ const AboutUs = () => {
             src={assets.Storelogo} 
             alt="Company Logo" 
           />
-          <h1>About Us</h1>
+          {/* <h1>About Us</h1> */}
         </div>
       </div>
 
@@ -47,31 +47,31 @@ const AboutUs = () => {
       {/* Where We Are Section */}
       <section className="about-section where-we-are">
       <h2>Where We Are</h2>
-  <div className="location-container">
-    {/* Embedded Google Map */}
-    <div className="map">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8903077206974!2d-122.08424948439815!3d37.4220655798259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb24a5e0e6d49%3A0x4c35b24ec2a0c0d2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1634599121634!5m2!1sen!2sus" 
-        width="400" 
-        height="300" 
-        allowFullScreen="" 
-        loading="lazy" 
-        title="Company Location"
-      ></iframe>
-    </div>
+      <div className="location-container">
+        {/* Embedded Google Map */}
+        <div className="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8903077206974!2d-122.08424948439815!3d37.4220655798259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb24a5e0e6d49%3A0x4c35b24ec2a0c0d2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1634599121634!5m2!1sen!2sus" 
+            width="400" 
+            height="300" 
+            allowFullScreen="" 
+            loading="lazy" 
+            title="Company Location"
+          ></iframe>
+        </div>
 
-    {/* Text Section */}
-    <div className="location-text">
-      <p>
-      Located in 1600 Amphitheatre Parkway, Mountain View Texas, we operate multiple warehouses across the state, ensuring quick and reliable delivery. 
-      With our own courier service, we efficiently serve customers statewide as we expand our online presence.
-      </p>
-      <p>
-        Address: 1600 Amphitheatre Parkway, Mountain View, Texas
-      </p>
-    </div>
-    </div>
-  </section>
+        {/* Text Section */}
+        <div className="location-text">
+          <p>
+          Located in 1600 Amphitheatre Parkway, Mountain View Texas, we operate multiple warehouses across the state, ensuring quick and reliable delivery. 
+          With our own courier service, we efficiently serve customers statewide as we expand our online presence.
+          </p>
+          <p>
+            Address: 1600 Amphitheatre Parkway, Mountain View, Texas
+          </p>
+        </div>
+        </div>
+      </section>
 
     </div>
   );

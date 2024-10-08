@@ -1,0 +1,13 @@
+.animated-offer {
+    animation: slide-up 1s ease forwards; /* Adjust duration and easing as needed */
+    opacity: 0; /* Start invisible */
+    transform: translateY(10px); /* Start slightly lower */
+  }
+  
+@keyframes slide-up {
+    to {
+      opacity: 1; /* Fade in */
+      transform: translateY(0); /* Move to original position */
+    }
+}
+  
