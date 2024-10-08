@@ -2,10 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 
 const Cart = () => {
-  const { cartItems, productsItems } = useContext(ShopContext);
+  const { cartItems, productsItems, incrementCartItem, decrementCartItem,removeCartItem,buyCartItem } = useContext(ShopContext);
   const [items, setItems] = useState([]);
 
-  // Update items whenever cartItems or productsItems change
   useEffect(() => {
     const updatedItems = Object.entries(cartItems).map(([id, qty]) => {
       const product = productsItems.find(item => item._id === id);
@@ -13,38 +12,14 @@ const Cart = () => {
         return { ...product, qty };
       }
       return null;
-    }).filter(Boolean); 
-    setItems(updatedItems); 
+    }).filter(Boolean);
+    setItems(updatedItems);
   }, [cartItems, productsItems]);
 
   const toggleButtons = (id) => {
     setItems(
       items.map(item =>
         item._id === id ? { ...item, showButtons: !item.showButtons } : item
-      )
-    );
-  };
-
-  const removeItem = (id) => {
-    setItems(items.filter(item => item._id !== id));
-  };
-
-  const buyItem = (id) => {
-    alert(`Bought ${items.find(item => item._id === id).name}`);
-  };
-
-  const incrementQty = (id) => {
-    setItems(
-      items.map(item =>
-        item._id === id ? { ...item, qty: item.qty + 1 } : item
-      )
-    );
-  };
-
-  const decrementQty = (id) => {
-    setItems(
-      items.map(item =>
-        item._id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item
       )
     );
   };
@@ -72,12 +47,12 @@ const Cart = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
                   <button 
-                    onClick={() => decrementQty(item._id)} 
+                    onClick={() => decrementCartItem(item._id)} 
                     className="bg-gray-300 p-2 rounded-md"
                   >-</button>
                   <span className="mx-4">{item.qty}</span>
                   <button 
-                    onClick={() => incrementQty(item._id)} 
+                    onClick={() => incrementCartItem(item._id)} 
                     className="bg-gray-300 p-2 rounded-md"
                   >+</button>
                 </div>
@@ -92,11 +67,11 @@ const Cart = () => {
               {item.showButtons && (
                 <div className="flex justify-between mt-4">
                   <button 
-                    onClick={() => removeItem(item._id)} 
+                    onClick={() => removeCartItem(item._id)} 
                     className="bg-red-500 text-white px-4 py-2 rounded-md"
                   >Remove Item</button>
                   <button 
-                    onClick={() => buyItem(item._id)} 
+                    onClick={() => buyCartItem(item._id)} 
                     className="bg-green-500 text-white px-4 py-2 rounded-md"
                   >Buy</button>
                 </div>
