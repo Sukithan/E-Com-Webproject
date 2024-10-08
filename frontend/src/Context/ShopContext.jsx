@@ -30,9 +30,40 @@ const ShopContextProvider = (props) => {
     const getCartCount = async () => {
         let count = 0; 
         let cartData = { ...cartItems }; 
-        count = Object.values(cartData).reduce((acc, qty) => acc + qty, 0); // Sum all quantities
+        count = Object.values(cartData).reduce((acc, qty) => acc + qty, 0); 
         return count;
     };
+
+    const incrementCartItem = (itemId) => {
+        let cartData = { ...cartItems };
+        if (cartData[itemId]) {
+            cartData[itemId] += 1;
+        }
+        setCartItems(cartData);
+    };
+
+    const decrementCartItem = (itemId) => {
+        let cartData = { ...cartItems };
+        if (cartData[itemId] && cartData[itemId] > 1) {
+            cartData[itemId] -= 1;
+        }
+        setCartItems(cartData);
+    };
+
+    const removeCartItem = (itemId) => {
+        let cartData = { ...cartItems };
+        delete cartData[itemId]; 
+        setCartItems(cartData); 
+    };
+
+    const buyCartItem = (itemId) => {
+        let cartData = { ...cartItems };
+        delete cartData[itemId]; 
+        setCartItems(cartData);
+        alert(`Bought ${items.find(item => item._id === id).name}`); 
+    };
+    
+    
     
     // useEffect(() => {
     //     const updateCartCount = async () => {
@@ -65,7 +96,11 @@ const ShopContextProvider = (props) => {
         addToCart,
         cartItems,
         getCartCount,
-        productsItems
+        productsItems,
+        incrementCartItem,  
+        decrementCartItem,
+        removeCartItem,
+        buyCartItem,
 
     };
 
