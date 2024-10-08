@@ -18,6 +18,8 @@ export const productsItems = [
         price: 100,
         image: [Camera],
         count:20,
+        reviews: [ "Amazing quality! Captures beautiful photos.", "Great camera, but the battery life could be better." ],
+        madeIn:"China",
     },
     {
         _id: "002",
@@ -26,6 +28,8 @@ export const productsItems = [
         price: 500,
         image: [Camera],
         count:10,
+        reviews: [ "Perfect for all my photography needs!", "Heavy but worth it for the quality." ],
+        madeIn:"China",
     },
     {
         _id: "003",
@@ -34,6 +38,8 @@ export const productsItems = [
         price: 250,
         image: [Camera],
         count:15,
+        reviews: [ "Great for my biking trips!", "Durable and takes amazing videos." ],
+        madeIn:"China",
     },
     {
         _id: "004",
@@ -42,6 +48,8 @@ export const productsItems = [
         price: 120,
         image: [Camera],
         count:23,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Ear-Pods
     {
@@ -51,6 +59,8 @@ export const productsItems = [
         price: 200,
         image: [Earpods],
         count: 10,
+        reviews: [ "Best sound quality I've experienced!", "Very comfortable for long wear." ],
+        madeIn:"China",
     },
     {
         _id: "006",
@@ -59,6 +69,8 @@ export const productsItems = [
         price: 300,
         image: [Earpods],
         count: 15,
+        reviews: [ "Works great in noisy environments.", "Good noise cancellation, but a bit bulky." ],
+        madeIn:"China",
     },
     {
         _id: "007",
@@ -67,6 +79,8 @@ export const productsItems = [
         price: 150,
         image: [Earpods],
         count: 20,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "008",
@@ -75,6 +89,8 @@ export const productsItems = [
         price: 180,
         image: [Earpods],
         count: 25,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Fans
     {
@@ -84,6 +100,8 @@ export const productsItems = [
         price: 50,
         image: [Fan],
         count: 30,
+        reviews: [ "Perfect size for my desk!", "Does a great job at keeping me cool." ],
+        madeIn:"China",
     },
     {
         _id: "010",
@@ -92,6 +110,8 @@ export const productsItems = [
         price: 80,
         image: [Fan],
         count: 25,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "011",
@@ -100,6 +120,8 @@ export const productsItems = [
         price: 70,
         image: [Fan],
         count: 40,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "012",
@@ -108,6 +130,8 @@ export const productsItems = [
         price: 60,
         image: [Fan],
         count: 35,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Headsets
     {
@@ -117,6 +141,8 @@ export const productsItems = [
         price: 110,
         image: [HeadSets],
         count: 15,
+        reviews: [ "Incredible sound quality and comfort!", "Good for long listening sessions." ],
+        madeIn:"China",
     },
     {
         _id: "014",
@@ -125,6 +151,8 @@ export const productsItems = [
         price: 150,
         image: [HeadSets],
         count: 20,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "015",
@@ -133,6 +161,8 @@ export const productsItems = [
         price: 90,
         image: [HeadSets],
         count: 30,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "016",
@@ -141,6 +171,8 @@ export const productsItems = [
         price: 200,
         image: [HeadSets],
         count: 10,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // iPads
     {
@@ -150,6 +182,8 @@ export const productsItems = [
         price: 400,
         image: [Ipad],
         count: 50,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "018",
@@ -158,6 +192,8 @@ export const productsItems = [
         price: 600,
         image: [Ipad],
         count: 45,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "019",
@@ -166,6 +202,8 @@ export const productsItems = [
         price: 800,
         image: [Ipad],
         count: 35,
+        reviews: [ "Absolutely love my iPad Pro!", "A bit pricey, but worth it for the performance." ],
+        madeIn:"China",
     },
     {
         _id: "020",
@@ -174,6 +212,8 @@ export const productsItems = [
         price: 300,
         image: [Ipad],
         count: 60,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Laptops
     {
@@ -183,6 +223,8 @@ export const productsItems = [
         price: 1500,
         image: [Laptops],
         count: 10,
+        reviews: [ "Best laptop I've ever owned for gaming!", "Fantastic performance, but can get hot." ],
+        madeIn:"China",
     },
     {
         _id: "022",
@@ -191,6 +233,8 @@ export const productsItems = [
         price: 1200,
         image: [Laptops],
         count: 20,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "023",
@@ -199,6 +243,8 @@ export const productsItems = [
         price: 1000,
         image: [Laptops],
         count: 30,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "024",
@@ -207,6 +253,8 @@ export const productsItems = [
         price: 900,
         image: [Laptops],
         count: 25,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Phones
     {
@@ -216,6 +264,8 @@ export const productsItems = [
         price: 700,
         image: [Phone],
         count: 50,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "026",
@@ -224,6 +274,8 @@ export const productsItems = [
         price: 300,
         image: [Phone],
         count: 60,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "027",
@@ -232,6 +284,8 @@ export const productsItems = [
         price: 500,
         image: [Phone],
         count: 40,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "028",
@@ -240,6 +294,8 @@ export const productsItems = [
         price: 1000,
         image: [Phone],
         count: 30,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Televisions
     {
@@ -249,6 +305,8 @@ export const productsItems = [
         price: 400,
         image: [Television],
         count: 20,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "030",
@@ -257,6 +315,8 @@ export const productsItems = [
         price: 600,
         image: [Television],
         count: 15,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "031",
@@ -265,6 +325,8 @@ export const productsItems = [
         price: 800,
         image: [Television],
         count: 10,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "032",
@@ -273,6 +335,8 @@ export const productsItems = [
         price: 1200,
         image: [Television],
         count: 5,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Toys
     {
@@ -282,6 +346,8 @@ export const productsItems = [
         price: 300,
         image: [ToyCar],
         count: 25,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "042",
@@ -290,6 +356,8 @@ export const productsItems = [
         price: 150,
         image: [ToyCar],
         count: 40,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "043",
@@ -298,6 +366,8 @@ export const productsItems = [
         price: 50,
         image: [ToyCar],
         count: 60,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "044",
@@ -306,6 +376,8 @@ export const productsItems = [
         price: 200,
         image: [ToyCar],
         count: 10,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     // Bluetooth Speaker
     {
@@ -315,6 +387,8 @@ export const productsItems = [
         price: 150,
         image: [BluetoothSpeaker],
         count: 50,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "038",
@@ -323,6 +397,8 @@ export const productsItems = [
         price: 250,
         image: [BluetoothSpeaker],
         count: 40,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
     {
         _id: "039",
@@ -331,6 +407,8 @@ export const productsItems = [
         price: 200,
         image: [BluetoothSpeaker],
         count: 30,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ]
+        ,madeIn:"China",
     },
     {
         _id: "040",
@@ -339,5 +417,7 @@ export const productsItems = [
         price: 400,
         image: [BluetoothSpeaker],
         count: 10,
+        reviews: [ "Love the instant prints! Perfect for parties.", "Fun to use, but the film is expensive." ],
+        madeIn:"China",
     },
 ];
