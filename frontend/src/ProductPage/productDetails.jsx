@@ -57,7 +57,7 @@ const ProductDetails = () => {
       </div>
 
       {/* Product Details */}
-      <div className='mt-5 border-t p-4 bg-gray-200'>
+      <div className='mt-10 border-t p-4 rounded-lg bg-purple-200'>
         <h1 className='text-xl font-semibold mb-2'>Description</h1>
         <p className='text-gray-700'>Made in: <span className='font-medium'>{product.madeIn}</span></p>
       </div>

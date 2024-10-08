@@ -1,12 +1,14 @@
-import React, { useState,useContext,useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; 
 import { assets } from '../assets/assets';
 import { ShopContext } from "../Context/ShopContext";
 
 const Navbar = () => {
-  const { getCartCount } = useContext(ShopContext);
+  const { getCartCount, productsItems } = useContext(ShopContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchCartCount = async () => {
@@ -16,6 +18,20 @@ const Navbar = () => {
 
     fetchCartCount();
   }, [getCartCount]);
+
+  // Function to handle search
+  const handleSearch = () => {
+    const foundProduct = productsItems.find(
+      (item) => item.type.toLowerCase() === searchQuery.toLowerCase() 
+    );
+
+    if (foundProduct) {
+      navigate(`/product/${foundProduct.categoryId}`);
+    } else {
+      navigate("/NotFound");
+    }
+    setSearchQuery("");
+  };
 
   return (
     <nav className='bg-purple-800 text-white'>
@@ -38,11 +54,20 @@ const Navbar = () => {
         <div className='flex items-center space-x-5 ml-auto'>
           {/* Search Bar and Icons */}
           <div className='hidden lg:flex items-center space-x-6'>
-            <input
-              type='text'
-              placeholder='Search...'
-              className='hidden sm:block px-4 py-2 rounded-md focus:outline-none text-black'
-            />
+            <div className='flex items-center gap-3'>
+              <input
+                type='text'
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleSearch()} // Trigger search on Enter key
+                placeholder='Search...'
+                className='hidden sm:block px-4 py-2 rounded-md focus:outline-none text-black'
+              />
+              <i 
+                className='fa-solid fa-magnifying-glass cursor-pointer'
+                onClick={handleSearch} 
+              ></i>
+            </div>
             <Link to='/Login' className='hidden sm:block hover:text-indigo-400'>Login</Link>
           </div>
 

@@ -13,6 +13,8 @@ export const productsItems = [
     // Cameras
     {
         _id: "001",
+        categoryId:"1",
+        type: "Camera",
         name: "Digital Camera",
         description: "A high-resolution digital camera equipped with advanced features such as optical zoom and image stabilization, perfect for capturing detailed images and videos. Ideal for photography enthusiasts and professionals looking to enhance their skills.",
         price: 100,
@@ -23,6 +25,8 @@ export const productsItems = [
     },
     {
         _id: "002",
+        categoryId:"1",
+        type: "Camera",
         name: "DSLR Camera",
         description: "A professional-grade DSLR camera that offers interchangeable lenses and superior image quality. With manual controls and fast autofocus, it’s designed for serious photographers who want to capture stunning images in any situation.",
         price: 500,
@@ -33,6 +37,8 @@ export const productsItems = [
     },
     {
         _id: "003",
+        categoryId:"1",
+        type: "Camera",
         name: "Action Camera",
         description: "A compact action camera that captures high-definition video and photos in extreme conditions. With its waterproof design and wide-angle lens, it’s perfect for outdoor adventures, sports, and travel.",
         price: 250,
@@ -43,6 +49,8 @@ export const productsItems = [
     },
     {
         _id: "004",
+        categoryId:"1",
+        type: "Camera",
         name: "Instant Camera",
         description: "A fun instant camera that allows you to capture moments and print photos immediately. Perfect for parties and events, this camera adds a nostalgic touch to your photography with its classic polaroid-style prints.",
         price: 120,
@@ -54,6 +62,8 @@ export const productsItems = [
     // Ear-Pods
     {
         _id: "005",
+        categoryId:"2",
+        type: "EarPods",
         name: "Wireless Ear-Pods",
         description: "Wireless ear-pods designed with high-quality sound and a comfortable fit.",
         price: 200,
@@ -64,6 +74,8 @@ export const productsItems = [
     },
     {
         _id: "006",
+        categoryId:"2",
+        type: "EarPods",
         name: "Noise-Cancelling Ear-Pods",
         description: "Ear-pods featuring advanced noise cancellation technology.",
         price: 300,
@@ -74,6 +86,8 @@ export const productsItems = [
     },
     {
         _id: "007",
+        categoryId:"2",
+        type: "EarPods",
         name: "Sport Ear-Pods",
         description: "Sweat-resistant ear-pods designed for active lifestyles.",
         price: 150,
@@ -84,6 +98,8 @@ export const productsItems = [
     },
     {
         _id: "008",
+        categoryId:"2",
+        type: "EarPods",
         name: "Bluetooth Ear-Pods",
         description: "Bluetooth-enabled ear-pods that offer seamless connectivity.",
         price: 180,
@@ -95,6 +111,8 @@ export const productsItems = [
     // Fans
     {
         _id: "009",
+        categoryId:"3",
+        type: "Fans",
         name: "Desk Fan",
         description: "A compact and efficient desk fan for personal cooling.",
         price: 50,
@@ -105,6 +123,8 @@ export const productsItems = [
     },
     {
         _id: "010",
+        categoryId:"3",
+        type: "Fans",
         name: "Tower Fan",
         description: "A tall, stylish tower fan that offers powerful airflow.",
         price: 80,
@@ -115,6 +135,8 @@ export const productsItems = [
     },
     {
         _id: "011",
+        categoryId:"3",
+        type: "Fans",
         name: "Pedestal Fan",
         description: "A height-adjustable pedestal fan for larger rooms.",
         price: 70,
@@ -125,6 +147,8 @@ export const productsItems = [
     },
     {
         _id: "012",
+        categoryId:"3",
+        type: "Fans",
         name: "Wall-Mounted Fan",
         description: "A space-saving wall-mounted fan with quiet operation.",
         price: 60,
@@ -136,6 +160,8 @@ export const productsItems = [
     // Headsets
     {
         _id: "013",
+        categoryId:"4",
+        type: "Headsets",
         name: "Gaming Headset",
         description: "Comfortable headsets designed for immersive gaming.",
         price: 110,
@@ -146,6 +172,8 @@ export const productsItems = [
     },
     {
         _id: "014",
+        categoryId:"4",
+        type: "Headsets",
         name: "Wireless Headset",
         description: "Wireless headsets with exceptional sound quality.",
         price: 150,
@@ -156,6 +184,8 @@ export const productsItems = [
     },
     {
         _id: "015",
+        categoryId:"4",
+        type: "Headsets",
         name: "Office Headset",
         description: "Professional headsets designed for office use.",
         price: 90,
@@ -166,6 +196,8 @@ export const productsItems = [
     },
     {
         _id: "016",
+        categoryId:"4",
+        type: "Headsets",
         name: "Studio Headset",
         description: "High-fidelity headsets for music production.",
         price: 200,
@@ -177,6 +209,8 @@ export const productsItems = [
     // iPads
     {
         _id: "017",
+        categoryId:"5",
+        type: "iPads",
         name: "iPad Mini",
         description: "A compact tablet with a high-resolution display.",
         price: 400,
@@ -187,6 +221,8 @@ export const productsItems = [
     },
     {
         _id: "018",
+        categoryId:"5",
+        type: "iPads",
         name: "iPad Air",
         description: "A lightweight tablet with a stunning Retina display.",
         price: 600,
@@ -197,6 +233,8 @@ export const productsItems = [
     },
     {
         _id: "019",
+        categoryId:"5",
+        type: "iPads",
         name: "iPad Pro",
         description: "A high-performance tablet for professionals.",
         price: 800,
@@ -207,6 +245,8 @@ export const productsItems = [
     },
     {
         _id: "020",
+        categoryId:"5",
+        type: "iPads",
         name: "iPad Classic",
         description: "The original iPad with essential features.",
         price: 300,
@@ -218,6 +258,8 @@ export const productsItems = [
     // Laptops
     {
         _id: "021",
+        categoryId:"6",
+        type: "Laptops",
         name: "Gaming Laptop",
         description: "A high-performance laptop for gaming.",
         price: 1500,
@@ -228,6 +270,8 @@ export const productsItems = [
     },
     {
         _id: "022",
+        categoryId:"6",
+        type: "Laptops",
         name: "Ultrabook",
         description: "A sleek and lightweight laptop for professionals.",
         price: 1200,
@@ -238,6 +282,8 @@ export const productsItems = [
     },
     {
         _id: "023",
+        categoryId:"6",
+        type: "Laptops",
         name: "Business Laptop",
         description: "A reliable laptop designed for business use.",
         price: 1000,
@@ -248,6 +294,8 @@ export const productsItems = [
     },
     {
         _id: "024",
+        categoryId:"6",
+        type: "Laptops",
         name: "2-in-1 Laptop",
         description: "A versatile laptop with touchscreen functionality.",
         price: 900,
@@ -259,6 +307,8 @@ export const productsItems = [
     // Phones
     {
         _id: "025",
+        categoryId:"7",
+        type: "Phones",
         name: "Smartphone A",
         description: "A modern smartphone with a powerful camera system.",
         price: 700,
@@ -269,6 +319,8 @@ export const productsItems = [
     },
     {
         _id: "026",
+        categoryId:"7",
+        type: "Phones",
         name: "Smartphone B",
         description: "A budget-friendly smartphone with essential features.",
         price: 300,
@@ -279,6 +331,8 @@ export const productsItems = [
     },
     {
         _id: "027",
+        categoryId:"7",
+        type: "Phones",
         name: "Smartphone C",
         description: "A smartphone with a long battery life and powerful camera.",
         price: 500,
@@ -289,6 +343,8 @@ export const productsItems = [
     },
     {
         _id: "028",
+        categoryId:"7",
+        type: "Phones",
         name: "Smartphone D",
         description: "A premium smartphone with cutting-edge technology.",
         price: 1000,
@@ -300,6 +356,8 @@ export const productsItems = [
     // Televisions
     {
         _id: "029",
+        categoryId:"8",
+        type: "Televisions",
         name: "LED TV",
         description: "A high-definition LED television with vibrant colors.",
         price: 400,
@@ -310,6 +368,8 @@ export const productsItems = [
     },
     {
         _id: "030",
+        categoryId:"8",
+        type: "Televisions",
         name: "Smart TV",
         description: "A smart television with built-in streaming capabilities.",
         price: 600,
@@ -320,6 +380,8 @@ export const productsItems = [
     },
     {
         _id: "031",
+        type: "Televisions",
+        categoryId:"8",
         name: "4K Ultra HD TV",
         description: "A 4K Ultra HD television for an immersive experience.",
         price: 800,
@@ -330,6 +392,8 @@ export const productsItems = [
     },
     {
         _id: "032",
+        categoryId:"8",
+        type: "Televisions",
         name: "OLED TV",
         description: "An OLED television with superior contrast and color accuracy.",
         price: 1200,
@@ -341,6 +405,8 @@ export const productsItems = [
     // Toys
     {
         _id: "041",
+        categoryId:"9",
+        type: "Toys",
         name: "Electric Toy Car",
         description: "A battery-powered electric toy car for kids with realistic features.",
         price: 300,
@@ -351,6 +417,8 @@ export const productsItems = [
     },
     {
         _id: "042",
+        categoryId:"9",
+        type: "Toys",
         name: "Remote Control Car",
         description: "A fast remote control car with excellent handling for outdoor play.",
         price: 150,
@@ -361,6 +429,8 @@ export const productsItems = [
     },
     {
         _id: "043",
+        categoryId:"9",
+        type: "Toys",
         name: "Die-Cast Model Car",
         description: "A highly detailed die-cast model car, perfect for collectors.",
         price: 50,
@@ -371,6 +441,8 @@ export const productsItems = [
     },
     {
         _id: "044",
+        categoryId:"9",
+        type: "Toys",
         name: "Racing Toy Car Set",
         description: "A complete racing toy car set with multiple tracks and cars.",
         price: 200,
@@ -382,6 +454,8 @@ export const productsItems = [
     // Bluetooth Speaker
     {
         _id: "037",
+        categoryId:"10",
+        type: "Speakers",
         name: "Portable Bluetooth Speaker",
         description: "A portable Bluetooth speaker with long battery life.",
         price: 150,
@@ -392,6 +466,8 @@ export const productsItems = [
     },
     {
         _id: "038",
+        categoryId:"10",
+        type: "Speakers",
         name: "Smart Bluetooth Speaker",
         description: "A smart Bluetooth speaker with voice assistant capabilities.",
         price: 250,
@@ -402,6 +478,8 @@ export const productsItems = [
     },
     {
         _id: "039",
+        categoryId:"10",
+        type: "Speakers",
         name: "Waterproof Bluetooth Speaker",
         description: "A waterproof Bluetooth speaker for outdoor use.",
         price: 200,
@@ -412,6 +490,8 @@ export const productsItems = [
     },
     {
         _id: "040",
+        categoryId:"10",
+        type: "Speakers",
         name: "High-Fidelity Bluetooth Speaker",
         description: "A high-fidelity Bluetooth speaker with premium sound.",
         price: 400,
