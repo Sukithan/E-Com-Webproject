@@ -1,0 +1,89 @@
+/* General Styles */
+.about-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Hero Image Section */
+  .about-hero {
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .company-logo {
+    width: 150px;
+    height: auto;
+    margin-left: 80px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+  }
+  
+  .hero-overlay h1 {
+    color: rgb(3, 3, 3);
+    margin-left: 40px;
+    margin-top: 0px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  /* About Sections */
+  .about-section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .about-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .who-we-are, .what-we-do, .where-we-are {
+    background-color: #f9f9f9;
+    margin: 30px 0;
+    border-radius: 10px;
+  }
+  
+  .location-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .map {
+    margin-right: 20px;
+  }
+  
+  .location-text {
+    width: 100%; /* Occupy full width */
+    padding: 20px;
+    text-align: left; /* Adjust text alignment */
+    background: #f9f9f9; /* Optional: background color for visibility */
+  }
+
+  .location-text p {
+    margin: 20px 0; /* Space between paragraphs */
+  }
