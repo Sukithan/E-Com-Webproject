@@ -20,23 +20,23 @@ const Cart = () => {
   const toggleButtons = (id) => {
     setItems(
       items.map(item =>
-        item.id === id ? { ...item, showButtons: !item.showButtons } : item
+        item._id === id ? { ...item, showButtons: !item.showButtons } : item
       )
     );
   };
 
   const removeItem = (id) => {
-    setItems(items.filter(item => item.id !== id));
+    setItems(items.filter(item => item._id !== id));
   };
 
   const buyItem = (id) => {
-    alert(`Bought ${items.find(item => item.id === id).name}`);
+    alert(`Bought ${items.find(item => item._id === id).name}`);
   };
 
   const incrementQty = (id) => {
     setItems(
       items.map(item =>
-        item.id === id ? { ...item, qty: item.qty + 1 } : item
+        item._id === id ? { ...item, qty: item.qty + 1 } : item
       )
     );
   };
@@ -44,7 +44,7 @@ const Cart = () => {
   const decrementQty = (id) => {
     setItems(
       items.map(item =>
-        item.id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item
+        item._id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item
       )
     );
   };
@@ -68,16 +68,16 @@ const Cart = () => {
           <div>Your cart is empty.</div>
         ) : (
           items.map(item => (
-            <div key={item.id} className="bg-white mb-4 p-4 rounded-lg shadow-md">
+            <div key={item._id} className="bg-white mb-4 p-4 rounded-lg shadow-md">
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
                   <button 
-                    onClick={() => decrementQty(item.id)} 
+                    onClick={() => decrementQty(item._id)} 
                     className="bg-gray-300 p-2 rounded-md"
                   >-</button>
                   <span className="mx-4">{item.qty}</span>
                   <button 
-                    onClick={() => incrementQty(item.id)} 
+                    onClick={() => incrementQty(item._id)} 
                     className="bg-gray-300 p-2 rounded-md"
                   >+</button>
                 </div>
@@ -85,18 +85,18 @@ const Cart = () => {
                 <span className="flex-1 text-center">${item.price ? item.price.toFixed(2) : 'N/A'}</span>
                 <span className="flex-1 text-center">${(item.price && item.qty) ? (item.price * item.qty).toFixed(2) : 'N/A'}</span>
                 <button 
-                  onClick={() => toggleButtons(item.id)} 
+                  onClick={() => toggleButtons(item._id)} 
                   className="text-lg"
                 >&#x25BC;</button>
               </div>
               {item.showButtons && (
                 <div className="flex justify-between mt-4">
                   <button 
-                    onClick={() => removeItem(item.id)} 
+                    onClick={() => removeItem(item._id)} 
                     className="bg-red-500 text-white px-4 py-2 rounded-md"
                   >Remove Item</button>
                   <button 
-                    onClick={() => buyItem(item.id)} 
+                    onClick={() => buyItem(item._id)} 
                     className="bg-green-500 text-white px-4 py-2 rounded-md"
                   >Buy</button>
                 </div>
