@@ -26,7 +26,11 @@ const Navbar = () => {
         <li>
           <Link to="/customer-order-report">Customer Order Report</Link>
         </li>
+        <li className='Lo'>
+          <Link to="/">Logout</Link>
+        </li>
       </ul>
+      
     </nav>
   );
 };
