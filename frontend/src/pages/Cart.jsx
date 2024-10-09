@@ -2,14 +2,15 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 
 const Cart = () => {
-  const { cartItems, productsItems, incrementCartItem, decrementCartItem,removeCartItem,buyCartItem } = useContext(ShopContext);
+  const { cartItems, productsItems, incrementCartItem, decrementCartItem, removeCartItem, buyCartItem } = useContext(ShopContext);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const updatedItems = Object.entries(cartItems).map(([id, qty]) => {
-      const product = productsItems.find(item => item._id === id);
+    const updatedItems = Object.entries(cartItems).map(([itemKey, { qty, variant }]) => {
+      const productId = itemKey.split('-')[0]; // Extract product ID from itemKey
+      const product = productsItems.find(item => item._id === productId);
       if (product) {
-        return { ...product, qty };
+        return { ...product, qty, variant, itemKey }; // Include variant data and itemKey
       }
       return null;
     }).filter(Boolean);
@@ -43,16 +44,16 @@ const Cart = () => {
           <div>Your cart is empty.</div>
         ) : (
           items.map(item => (
-            <div key={item._id} className="bg-white mb-4 p-4 rounded-lg shadow-md">
+            <div key={item.itemKey} className="bg-white mb-4 p-4 rounded-lg shadow-md">
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
                   <button 
-                    onClick={() => decrementCartItem(item._id)} 
+                    onClick={() => decrementCartItem(item.itemKey)} 
                     className="bg-gray-300 p-2 rounded-md"
                   >-</button>
                   <span className="mx-4">{item.qty}</span>
                   <button 
-                    onClick={() => incrementCartItem(item._id)} 
+                    onClick={() => incrementCartItem(item.itemKey)} 
                     className="bg-gray-300 p-2 rounded-md"
                   >+</button>
                 </div>
@@ -64,14 +65,18 @@ const Cart = () => {
                   className="text-lg"
                 >&#x25BC;</button>
               </div>
+              <div className="mt-2 text-center">
+                <span className="font-semibold">Variant: </span>
+                <span>{item.variant.color} - {item.variant.size}</span>
+              </div>
               {item.showButtons && (
                 <div className="flex justify-between mt-4">
                   <button 
-                    onClick={() => removeCartItem(item._id)} 
+                    onClick={() => removeCartItem(item.itemKey)} 
                     className="bg-red-500 text-white px-4 py-2 rounded-md"
                   >Remove Item</button>
                   <button 
-                    onClick={() => buyCartItem(item._id)} 
+                    onClick={() => buyCartItem(item.itemKey)} 
                     className="bg-green-500 text-white px-4 py-2 rounded-md"
                   >Buy</button>
                 </div>
