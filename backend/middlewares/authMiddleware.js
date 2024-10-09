@@ -19,3 +19,7 @@ const authenticateJWT = (req, res, next) => {
 };
 
 module.exports = authenticateJWT;
+
+// The code defines a middleware function called authenticateJWT that checks whether a request contains a valid JWT (JSON Web Token), ensuring that only authenticated users can access certain routes or resources.
+
+
