@@ -16,6 +16,7 @@ import ProductDetails from './ProductPage/productDetails';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/productDetails/:id' element={<ProductDetails/>} /> 
         <Route path='/Order' element={<Order />} />
         <Route path='/Profile' element={<Profile />} />
+        <Route path='/NotFound' element={<NotFound/>}/>
       </Routes>
       <Footer />
     </div>

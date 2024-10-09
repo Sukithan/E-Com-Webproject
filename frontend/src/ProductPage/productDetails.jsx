@@ -1,9 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from "../Context/ShopContext";
 import { useParams } from 'react-router-dom';
-import { assets } from '../assets/assets2';
-
-
 
 const ProductDetails = () => {
   const { id } = useParams(); 
@@ -21,7 +18,7 @@ const ProductDetails = () => {
       const initialSize = foundProduct.variants[0].sizes[0].size; 
       setSelectedColor(initialColor);
       setSelectedSize(initialSize);
-      setSelectedImage(foundProduct.image[initialColor]);
+      setSelectedImage(foundProduct.image[initialColor]); // Set initial image based on color
     }
   }, [id, productsItems]); 
 
@@ -33,8 +30,8 @@ const ProductDetails = () => {
     setSelectedColor(color);
     const newVariant = product.variants.find(variant => variant.color === color);
     if (newVariant) {
-      setSelectedSize(newVariant.sizes[0].size); 
-      setSelectedImage(product.image[color]); 
+      setSelectedSize(newVariant.sizes[0].size); // Default to the first size
+      setSelectedImage(product.image[color]); // Change image based on selected color
     }
   };
 

@@ -209,6 +209,7 @@ export const productsItems = [
             }
         ]
     },
+
     // Ear-Pods
     {
         _id: "005",
@@ -350,7 +351,7 @@ export const productsItems = [
             }
         ]
     },
-    // Fans
+    // Table Fans
     {
         _id: "009",
         name: "Desk Fan",

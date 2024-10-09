@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Axios from 'axios';
 
 const Login = () => {
   //const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ const Login = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [currentState, setCurrentState] = useState('Sign up');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     // Handle login or signup logic here
     if (currentState === 'Sign up' && password !== confirmPassword) {
@@ -18,9 +19,39 @@ const Login = () => {
     }
     else if(currentState === 'Sign up' && validatePassword(password)){
       //Ok proceed sign up..
+      const signup_response = await Axios.post("http://localhost:3000/signup",
+        {
+          firstname:firstname,
+          lastname:lastname,
+          email:email,
+          password:password
+        }
+      );
+      if (signup_response){
+        console.log("success!");
+        console.log(signup_response);
+        //window.location.href = "/";
+        // return;
+      };
+
     }
-    else{
-      return;
+    else if(currentState === 'Login'){
+      try {
+        const login_response = await Axios.post("http://localhost:3000/login", {
+            email: email,
+            password: password
+        });
+        
+        // Access the response data from the promise
+        if (login_response) {
+            console.log('Login ok!');
+            console.log(login_response); // Assuming you want to log the response data
+            //window.location.href = "/";
+        }
+      } 
+      catch (error) {
+        console.error("Login error:", error);
+      }
     }
   };
 
