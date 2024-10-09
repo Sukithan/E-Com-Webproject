@@ -10,7 +10,7 @@ const Login = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [currentState, setCurrentState] = useState('Sign up');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     // Handle login or signup logic here
     if (currentState === 'Sign up' && password !== confirmPassword) {
@@ -19,7 +19,7 @@ const Login = () => {
     }
     else if(currentState === 'Sign up' && validatePassword(password)){
       //Ok proceed sign up..
-      const signup_response = Axios.post("http://localhost:3000/signup",
+      const signup_response = await Axios.post("http://localhost:3000/signup",
         {
           firstname:firstname,
           lastname:lastname,
@@ -30,14 +30,14 @@ const Login = () => {
       if (signup_response){
         console.log("success!");
         console.log(signup_response);
-        window.location.href = "/";
+        //window.location.href = "/";
         // return;
       };
 
     }
     else if(currentState === 'Login'){
       try {
-        const login_response = Axios.post("http://localhost:3000/login", {
+        const login_response = await Axios.post("http://localhost:3000/login", {
             email: email,
             password: password
         });
@@ -46,7 +46,7 @@ const Login = () => {
         if (login_response) {
             console.log('Login ok!');
             console.log(login_response); // Assuming you want to log the response data
-            window.location.href = "/";
+            //window.location.href = "/";
         }
       } 
       catch (error) {
