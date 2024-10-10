@@ -8,7 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [currentState, setCurrentState] = useState('Sign up');
+  const [currentState, setCurrentState] = useState('Login');
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const Login = () => {
     }
     else if(currentState === 'Sign up' && validatePassword(password)){
       //Ok proceed sign up..
-      const signup_response = await Axios.post("http://localhost:3000/signup",
+      const signup_response = await Axios.post("http://localhost:3001/signup",
         {
           firstname:firstname,
           lastname:lastname,
@@ -27,17 +27,30 @@ const Login = () => {
           password:password
         }
       );
-      if (signup_response){
+      if (signup_response.data.token != 'User with this email already exists'){
         console.log("success!");
         console.log(signup_response);
+
+        // Extract the token from response data
+        const token = signup_response.data.token;
+        
+        // Optionally, store the token in localStorage or sessionStorage
+        localStorage.setItem('token', token);  // Or sessionStorage.setItem('token', token);
+        
+        console.log("Token stored successfully:", token);
+        
+        // Redirect to another page or do further actions
         //window.location.href = "/";
         // return;
+      }
+      else{
+        alert('User with this email already exists')
       };
 
     }
     else if(currentState === 'Login'){
       try {
-        const login_response = await Axios.post("http://localhost:3000/login", {
+        const login_response = await Axios.post("http://localhost:3001/login", {
             email: email,
             password: password
         });
