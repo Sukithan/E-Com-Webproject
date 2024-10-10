@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from "../Context/ShopContext";
 import { useParams } from 'react-router-dom';
+import { assets } from '../assets/assets';
 
 const ProductDetails = () => {
   const { id } = useParams(); 
@@ -52,6 +53,11 @@ const ProductDetails = () => {
           <h1 className='font-medium text-2xl mt-2'>{product.name}</h1>
           <div className='flex items-center gap-1 mt-2'>
             {/* Star Ratings */}
+            {/* Star Ratings */}
+            <div className='flex flex-row gap-2 my-1'>
+                    <img src={assets.Star} alt="" className='w-3.5' /> 
+                    <p className=''>4.7</p>
+                  </div>
             {/* Add star images here */}
           </div>
           <p className='mt-4'>{product.description}</p>
