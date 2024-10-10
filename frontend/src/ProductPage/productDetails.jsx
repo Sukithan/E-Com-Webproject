@@ -19,7 +19,7 @@ const ProductDetails = () => {
       const initialSize = foundProduct.variants[0].sizes[0].size; 
       setSelectedColor(initialColor);
       setSelectedSize(initialSize);
-      setSelectedImage(foundProduct.image[initialColor]); // Set initial image based on color
+      setSelectedImage(foundProduct.image[initialColor]); 
     }
   }, [id, productsItems]); 
 
