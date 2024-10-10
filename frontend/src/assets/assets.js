@@ -136,11 +136,7 @@ export const productCategoriesOne = [
         name: "Digital Camera",
         description: "A high-resolution digital camera equipped with advanced features such as optical zoom and image stabilization, perfect for capturing detailed images and videos. Ideal for photography enthusiasts and professionals looking to enhance their skills.",
         price: 100,
-        image: {
-            Black: Camera,
-            Silver: Earpods,
-            Red: Camera,
-        },
+        image: Camera,
         count:20,
         variants: [
             {
@@ -174,11 +170,7 @@ export const productCategoriesOne = [
         name: "DSLR Camera",
         description: "A professional-grade DSLR camera that offers interchangeable lenses and superior image quality. With manual controls and fast autofocus, it’s designed for serious photographers who want to capture stunning images in any situation.",
         price: 500,
-        image: {
-            Black: Camera,
-            Silver: Camera,
-            Red: Camera,
-        },
+        image:  Camera,
         count:10,
         variants: [
             {
@@ -212,11 +204,7 @@ export const productCategoriesOne = [
         name: "Action Camera",
         description: "A compact action camera that captures high-definition video and photos in extreme conditions. With its waterproof design and wide-angle lens, it’s perfect for outdoor adventures, sports, and travel.",
         price: 250,
-        image: {
-            Black: Camera,
-            Silver: Camera,
-            Red: Camera,
-        },
+        image: Camera,
         count:15,
         variants: [
             {
@@ -250,11 +238,7 @@ export const productCategoriesOne = [
         name: "Instant Camera",
         description: "A fun instant camera that allows you to capture moments and print photos immediately. Perfect for parties and events, this camera adds a nostalgic touch to your photography with its classic polaroid-style prints.",
         price: 120,
-        image: {
-            Black: Camera,
-            Silver: Camera,
-            Red: Camera,
-        },
+        image: Camera,
         count:23,
         variants: [
             {
@@ -292,11 +276,7 @@ export const productCategoriesTwo = [
         name: "Wireless Ear-Pods",
         description: "Wireless ear-pods designed with high-quality sound and a comfortable fit.",
         price: 200,
-        image: {
-            Black: Earpods,
-            White: Earpods,
-            Blue: Earpods,
-        },
+        image: Earpods,
         count: 10,
         variants: [
             {
@@ -327,11 +307,7 @@ export const productCategoriesTwo = [
         name: "Noise-Cancelling Ear-Pods",
         description: "Ear-pods featuring advanced noise cancellation technology.",
         price: 300,
-        image: {
-            Black: Earpods,
-            White: Earpods,
-            Blue: Earpods,
-        },
+        image: Earpods,
         count: 15,
         variants: [
             {
@@ -362,11 +338,7 @@ export const productCategoriesTwo = [
         name: "Sport Ear-Pods",
         description: "Sweat-resistant ear-pods designed for active lifestyles.",
         price: 150,
-        image: {
-            Black: Earpods,
-            White: Earpods,
-            Blue: Earpods,
-        },
+        image: Earpods,
         count: 20,
         variants: [
             {
@@ -397,11 +369,7 @@ export const productCategoriesTwo = [
         name: "Bluetooth Ear-Pods",
         description: "Bluetooth-enabled ear-pods that offer seamless connectivity.",
         price: 180,
-        image: {
-            Black: Earpods,
-            White: Earpods,
-            Blue: Earpods,
-        },
+        image:Earpods,
         count: 25,
         variants: [
             {
@@ -436,11 +404,7 @@ export const productCategoriesThree = [
         name: "Desk Fan",
         description: "A compact and efficient desk fan for personal cooling.",
         price: 50,
-        image: {
-            Black: Fan,
-            Silver: Fan,
-            White: Fan,
-        },
+        image: Fan,
         count: 30,
         variants: [
             {
@@ -471,11 +435,7 @@ export const productCategoriesThree = [
         name: "Tower Fan",
         description: "A tall, stylish tower fan that offers powerful airflow.",
         price: 80,
-        image: {
-            Black: Fan,
-            Silver: Fan,
-            White: Fan,
-        },
+        image:  Fan,
         count: 25,
         variants: [
             {
@@ -506,11 +466,7 @@ export const productCategoriesThree = [
         name: "Pedestal Fan",
         description: "A height-adjustable pedestal fan for larger rooms.",
         price: 70,
-        image: {
-            Black: Fan,
-            Silver: Fan,
-            White: Fan,
-        },
+        image: Fan,
         count: 40,
         variants: [
             {
@@ -541,11 +497,7 @@ export const productCategoriesThree = [
         name: "Wall-Mounted Fan",
         description: "A space-saving wall-mounted fan with quiet operation.",
         price: 60,
-        image: {
-            Black: Fan,
-            Silver: Fan,
-            White: Fan,
-        },
+        image:  Fan,
         count: 35,
         variants: [
             {
@@ -611,11 +563,7 @@ export const productCategoriesFour = [
         name: "Wireless Headset",
         description: "Wireless headsets with exceptional sound quality.",
         price: 150,
-        image: {
-            Black: HeadSets,
-            Red: HeadSets,
-            Blue: HeadSets,
-        },
+        image: HeadSets,
         count: 20,
         variants: [
             {
@@ -646,11 +594,7 @@ export const productCategoriesFour = [
         name: "Office Headset",
         description: "Professional headsets designed for office use.",
         price: 90,
-        image: {
-            Black: HeadSets,
-            Red: HeadSets,
-            Blue: HeadSets,
-        },
+        image: HeadSets,
         count: 30,
         variants: [
             {
@@ -681,11 +625,7 @@ export const productCategoriesFour = [
         name: "Studio Headset",
         description: "High-fidelity headsets for music production.",
         price: 200,
-        image: {
-            Black: HeadSets,
-            Red: HeadSets,
-            Blue: HeadSets,
-        },
+        image: HeadSets,
         count: 10,
         variants: [
             {
@@ -720,11 +660,7 @@ export const productCategoriesFive = [
         name: "iPad Mini",
         description: "A compact tablet with a high-resolution display.",
         price: 400,
-        mage: {
-            Black: Ipad,
-            Gray: Ipad,
-            RoseGold: Ipad,
-        },
+        image: Ipad,
         count: 50,
         variants: [
             {
@@ -755,11 +691,7 @@ export const productCategoriesFive = [
         name: "iPad Air",
         description: "A lightweight tablet with a stunning Retina display.",
         price: 600,
-        mage: {
-            Black: Ipad,
-            Gray: Ipad,
-            RoseGold: Ipad,
-        },
+        image: Ipad,
         count: 45,
         variants: [
             {
@@ -790,11 +722,7 @@ export const productCategoriesFive = [
         name: "iPad Pro",
         description: "A high-performance tablet for professionals.",
         price: 800,
-        mage: {
-            Black: Ipad,
-            Gray: Ipad,
-            RoseGold: Ipad,
-        },
+        image: Ipad,
         count: 35,
         variants: [
             {
@@ -825,11 +753,7 @@ export const productCategoriesFive = [
         name: "iPad Classic",
         description: "The original iPad with essential features.",
         price: 300,
-        mage: {
-            Black: Ipad,
-            Gray: Ipad,
-            RoseGold: Ipad,
-        },
+        image: Ipad,
         count: 60,
         variants: [
             {
@@ -864,10 +788,7 @@ export const productCategoriesSix = [
         name: "Gaming Laptop",
         description: "A high-performance laptop for gaming.",
         price: 1500,
-        image: {
-            Black: Laptops,
-            Silver: Laptops,
-        },
+        image:Laptops,
         count: 10,
         variants: [
             {
@@ -891,10 +812,7 @@ export const productCategoriesSix = [
         name: "Ultrabook",
         description: "A sleek and lightweight laptop for professionals.",
         price: 1200,
-        image: {
-            Black: Laptops,
-            Silver: Laptops,
-        },
+        image: Laptops,
         count: 20,
         variants: [
             {
@@ -918,10 +836,7 @@ export const productCategoriesSix = [
         name: "Business Laptop",
         description: "A reliable laptop designed for business use.",
         price: 1000,
-        image: {
-            Black: Laptops,
-            Silver: Laptops,
-        },
+        image: Laptops,
         count: 30,
         variants: [
             {
@@ -945,10 +860,7 @@ export const productCategoriesSix = [
         name: "2-in-1 Laptop",
         description: "A versatile laptop with touchscreen functionality.",
         price: 900,
-        image: {
-            Black: Laptops,
-            Silver: Laptops,
-        },
+        image: Laptops,
         count: 25,
         variants: [
             {
@@ -976,11 +888,7 @@ export const productCategoriesSeven = [
         name: "Smartphone A",
         description: "A modern smartphone with a powerful camera system.",
         price: 700,
-        image: {
-            Black: Phone,
-            White: Phone,
-            Blue: Phone,
-        },
+        image: Phone,
         count: 50,
         variants: [
             {
@@ -1011,11 +919,7 @@ export const productCategoriesSeven = [
         name: "Smartphone B",
         description: "A budget-friendly smartphone with essential features.",
         price: 300,
-        image: {
-            Black: Phone,
-            White: Phone,
-            Blue: Phone,
-        },
+        image: Phone,
         count: 60,
         variants: [
             {
@@ -1046,11 +950,7 @@ export const productCategoriesSeven = [
         name: "Smartphone C",
         description: "A smartphone with a long battery life and powerful camera.",
         price: 500,
-        image: {
-            Black: Phone,
-            White: Phone,
-            Blue: Phone,
-        },
+        image: Phone,
         count: 40,
         variants: [
             {
@@ -1081,11 +981,7 @@ export const productCategoriesSeven = [
         name: "Smartphone D",
         description: "A premium smartphone with cutting-edge technology.",
         price: 1000,
-        image: {
-            Black: Phone,
-            White: Phone,
-            Blue: Phone,
-        },
+        image:  Phone,
         count: 30,
         variants: [
             {
@@ -1120,10 +1016,7 @@ export const productCategoriesEight = [
         name: "LED TV",
         description: "A high-definition LED television with vibrant colors.",
         price: 400,
-        image: {
-            Black: Television,
-            Gray: Television,
-        },
+        image: Television,
         count: 20,
         variants: [
             {
@@ -1147,10 +1040,7 @@ export const productCategoriesEight = [
         name: "Smart TV",
         description: "A smart television with built-in streaming capabilities.",
         price: 600,
-        image: {
-            Black: Television,
-            Gray: Television,
-        },
+        image: Television,
         count: 15,
         variants: [
             {
@@ -1174,10 +1064,7 @@ export const productCategoriesEight = [
         name: "4K Ultra HD TV",
         description: "A 4K Ultra HD television for an immersive experience.",
         price: 800,
-        image: {
-            Black: Television,
-            Gray: Television,
-        },
+        image: Television,
         count: 10,
         variants: [
             {
@@ -1201,10 +1088,7 @@ export const productCategoriesEight = [
         name: "OLED TV",
         description: "An OLED television with superior contrast and color accuracy.",
         price: 1200,
-        image: {
-            Black: Television,
-            Gray: Television,
-        },
+        image: Television,
         count: 5,
         variants: [
             {
@@ -1232,11 +1116,7 @@ export const productCategoriesNine = [
         name: "Electric Toy Car",
         description: "A battery-powered electric toy car for kids with realistic features.",
         price: 300,
-        image: {
-            Black: ToyCar,
-            Red: ToyCar,
-            Blue: ToyCar,
-        },
+        image: ToyCar,
         count: 25,
         variants: [
             {
@@ -1267,11 +1147,7 @@ export const productCategoriesNine = [
         name: "Remote Control Car",
         description: "A fast remote control car with excellent handling for outdoor play.",
         price: 150,
-        image: {
-            Black: ToyCar,
-            Red: ToyCar,
-            Blue: ToyCar,
-        },
+        image: ToyCar,
         count: 40,
         variants: [
             {
@@ -1302,11 +1178,7 @@ export const productCategoriesNine = [
         name: "Die-Cast Model Car",
         description: "A highly detailed die-cast model car, perfect for collectors.",
         price: 50,
-        image: {
-            Black: ToyCar,
-            Red: ToyCar,
-            Blue: ToyCar,
-        },
+        image: ToyCar,
         count: 60,
         variants: [
             {
@@ -1337,11 +1209,7 @@ export const productCategoriesNine = [
         name: "Racing Toy Car Set",
         description: "A complete racing toy car set with multiple tracks and cars.",
         price: 200,
-        image: {
-            Black: ToyCar,
-            Red: ToyCar,
-            Blue: ToyCar,
-        },
+        image: ToyCar,
         count: 10,
         variants: [
             {
@@ -1376,11 +1244,7 @@ export const productCategoriesTen = [
         name: "Portable Bluetooth Speaker",
         description: "A portable Bluetooth speaker with long battery life.",
         price: 150,
-        image: {
-            Black: BluetoothSpeaker,
-            Blue: BluetoothSpeaker,
-            Red: BluetoothSpeaker,
-        },
+        image: BluetoothSpeaker,
         count: 50,
         variants: [
             {
@@ -1411,11 +1275,7 @@ export const productCategoriesTen = [
         name: "Smart Bluetooth Speaker",
         description: "A smart Bluetooth speaker with voice assistant capabilities.",
         price: 250,
-        image: {
-            Black: BluetoothSpeaker,
-            Blue: BluetoothSpeaker,
-            Red: BluetoothSpeaker,
-        },
+        image: BluetoothSpeaker,
         count: 40,
         variants: [
             {
@@ -1446,11 +1306,7 @@ export const productCategoriesTen = [
         name: "Waterproof Bluetooth Speaker",
         description: "A waterproof Bluetooth speaker for outdoor use.",
         price: 200,
-        image: {
-            Black: BluetoothSpeaker,
-            Blue: BluetoothSpeaker,
-            Red: BluetoothSpeaker,
-        },
+        image:  BluetoothSpeaker,
         count: 30,
         variants: [
             {
@@ -1481,11 +1337,7 @@ export const productCategoriesTen = [
         name: "High-Fidelity Bluetooth Speaker",
         description: "A high-fidelity Bluetooth speaker with premium sound.",
         price: 400,
-        image: {
-            Black: BluetoothSpeaker,
-            Blue: BluetoothSpeaker,
-            Red: BluetoothSpeaker,
-        },
+        image: BluetoothSpeaker,
         count: 10,
         variants: [
             {

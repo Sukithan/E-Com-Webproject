@@ -635,7 +635,7 @@ export const productsItems = [
         name: "iPad Mini",
         description: "A compact tablet with a high-resolution display.",
         price: 400,
-        mage: {
+        image: {
             Black: Ipad,
             Gray: Ipad,
             RoseGold: Ipad,
@@ -670,7 +670,7 @@ export const productsItems = [
         name: "iPad Air",
         description: "A lightweight tablet with a stunning Retina display.",
         price: 600,
-        mage: {
+        image: {
             Black: Ipad,
             Gray: Ipad,
             RoseGold: Ipad,
@@ -705,7 +705,7 @@ export const productsItems = [
         name: "iPad Pro",
         description: "A high-performance tablet for professionals.",
         price: 800,
-        mage: {
+        image: {
             Black: Ipad,
             Gray: Ipad,
             RoseGold: Ipad,
@@ -740,7 +740,7 @@ export const productsItems = [
         name: "iPad Classic",
         description: "The original iPad with essential features.",
         price: 300,
-        mage: {
+        image: {
             Black: Ipad,
             Gray: Ipad,
             RoseGold: Ipad,
