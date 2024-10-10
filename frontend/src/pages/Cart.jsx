@@ -6,11 +6,10 @@ const Cart = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const updatedItems = Object.entries(cartItems).map(([itemKey, { qty, variant }]) => {
-      const productId = itemKey.split('-')[0]; // Extract product ID from itemKey
-      const product = productsItems.find(item => item._id === productId);
+    const updatedItems = Object.entries(cartItems).map(([itemKey, { qty }]) => {
+      const product = productsItems.find(item => item._id === itemKey);
       if (product) {
-        return { ...product, qty, variant, itemKey }; // Include variant data and itemKey
+        return { ...product, qty, itemKey, showButtons: false };
       }
       return null;
     }).filter(Boolean);
@@ -64,10 +63,6 @@ const Cart = () => {
                   onClick={() => toggleButtons(item._id)} 
                   className="text-lg"
                 >&#x25BC;</button>
-              </div>
-              <div className="mt-2 text-center">
-                <span className="font-semibold">Variant: </span>
-                <span>{item.variant.color} - {item.variant.size}</span>
               </div>
               {item.showButtons && (
                 <div className="flex justify-between mt-4">

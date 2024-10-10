@@ -11,29 +11,29 @@ const ShopContextProvider = (props) => {
     const delivery_fee = 10;
 
     // Load cart from localStorage
-    useEffect(() => {
-        const storedCart = localStorage.getItem('cartItems');
-        if (storedCart) {
-            setCartItems(JSON.parse(storedCart));
-        }
-    }, []);
+    // useEffect(() => {
+    //     const storedCart = localStorage.getItem('cartItems');
+    //     if (storedCart) {
+    //         setCartItems(JSON.parse(storedCart));
+    //     }
+    // }, []);
 
     // Save cart to localStorage whenever it changes
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
 
-    const addToCart = (itemId, variant) => {
+    const addToCart = (itemId) => {
         toast.success("You have Selected");
 
         let cartData = { ...cartItems };
 
-        // Create unique key based on item ID and variant
-        const itemKey = `${itemId}-${variant.color}-${variant.size}`;
-        if (cartData[itemKey]) {
-            cartData[itemKey].qty += 1; // Increment quantity
+        // If the item is already in the cart, increment the quantity
+        if (cartData[itemId]) {
+            cartData[itemId].qty += 1; 
         } else {
-            cartData[itemKey] = { qty: 1, variant }; // Add new item with variant
+            // Otherwise, add the item with a quantity of 1
+            cartData[itemId] = { qty: 1 }; 
         }
 
         setCartItems(cartData);
@@ -74,7 +74,6 @@ const ShopContextProvider = (props) => {
         const item = cartData[itemKey];
         delete cartData[itemKey]; 
         setCartItems(cartData);
-        alert(`Bought ${item.variant.color} ${item.variant.size} of ${itemKey}`); 
     };
     
     const value = {
