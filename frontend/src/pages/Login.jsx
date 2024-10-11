@@ -57,9 +57,17 @@ const Login = () => {
         
         // Access the response data from the promise
         if (login_response) {
-            console.log('Login ok!');
-            console.log(login_response); // Assuming you want to log the response data
-            //window.location.href = "/";
+          console.log('Login ok!');
+          console.log(login_response); // Assuming you want to log the response data
+          //window.location.href = "/";
+
+              // Extract the token from response data
+          const token = login_response.data.token;
+          
+          // Optionally, store the token in localStorage or sessionStorage
+          localStorage.setItem('token', token);  // Or sessionStorage.setItem('token', token);
+          
+          console.log("Token stored successfully:", token);
         }
       } 
       catch (error) {
