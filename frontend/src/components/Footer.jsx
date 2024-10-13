@@ -1,5 +1,5 @@
 import React from 'react';
-import { assets } from '../assets/assets';
+import { assets } from '../../public/assets/assets';
 
 const Footer = () => (
   <footer className="bg-gradient-to-r from-purple-700 to-indigo-600 text-white p-6 md:p-10">

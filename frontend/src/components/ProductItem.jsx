@@ -10,7 +10,7 @@ const ProductItem = ({ id, image, name, price }) => {
       <div className='overflow-hidden'>
         <img 
           className='w-full h-72 object-cover md:h-56 lg:h-72' 
-          src={image[0]} 
+          src={`/assets/${image}`} 
           alt={name} 
         />
       </div>

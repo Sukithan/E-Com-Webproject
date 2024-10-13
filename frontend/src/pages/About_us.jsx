@@ -1,7 +1,7 @@
 import React from 'react';
 import './About_us.css';
-import bgImage from '../assets/Background_AboutUs.png';
-import { assets } from '../assets/assets';
+import bgImage from '../../public/assets/Background_AboutUs.png';
+import { assets } from '../../public/assets/assets';
 
 const AboutUs = () => {
   return (

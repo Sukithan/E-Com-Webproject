@@ -11,7 +11,7 @@ import HeadSets from "./HeadSets.jpg"
 import Ipad from "./Ipad.jpeg"
 import Laptops from "./Laptops.jpg"
 import Phone from "./Phone.jpg"
-import Television from "./Televison.jpg"
+import Television from "./Television.jpg"
 import ToyCar from "./ToyCar.jpeg"
 import ContactUs from "./contactUs.jpg"
 import Electric_car from "./Electriic car.jpg"
@@ -57,78 +57,78 @@ export const assets = {
     
 };
 
-export const products = [
-    {
-        _id: "1",
-        name: "Camera",
-        image: [Camera],
-        category: "Handheld",
-        subCategory: "Entertain",
-    },
-    {
-        _id: "2",
-        name: "Ear-Pods",
-        image: [Earpods],
-        category: "Handheld",
-        subCategory: "Study",
-    },
-    {
-        _id: "3",
-        name: "Table Fan",
-        image: [Fan],
-        category: "Home",
-        subCategory: "DailyUse",
-    },
-    {
-        _id: "4",
-        name: "Headsets",
-        image: [HeadSets],
-        category: "Handheld",
-        subCategory: "Entertain",
-    },
-    {
-        _id: "5",
-        name: "Ipad",
-        image: [Ipad],
-        category: "Handheld",
-        subCategory: "Study",
-    },
-    {
-        _id: "6",
-        name: "Laptops",
-        image: [Laptops],
-        category: "Handheld",
-        subCategory: "Study",
-    },
-    {
-        _id: "7",
-        name: "Phone",
-        image: [Phone],
-        category: "Handheld",
-        subCategory: "DailyUse",
-    },
-    {
-        _id: "8",
-        name: "Television",
-        image: [Television],
-        category: "Home",
-        subCategory: "DailyUse",
-    },
-    {
-        _id: "9",
-        name: "Electric Car",
-        image: [ToyCar],
-        category: "ElectricToys",
-        subCategory: "Entertain",
-    },
-    {
-        _id: "10",
-        name: "Bluetooth Speaker",
-        image: [BluetoothSpeaker],
-        category: "Handheld",
-        subCategory: "Entertain",
-    },
-];
+// export const products = [
+//     {
+//         _id: "1",
+//         name: "Camera",
+//         image: [Camera],
+//         category: "Handheld",
+//         subCategory: "Entertain",
+//     },
+//     {
+//         _id: "2",
+//         name: "Ear-Pods",
+//         image: [Earpods],
+//         category: "Handheld",
+//         subCategory: "Study",
+//     },
+//     {
+//         _id: "3",
+//         name: "Table Fan",
+//         image: [Fan],
+//         category: "Home",
+//         subCategory: "DailyUse",
+//     },
+//     {
+//         _id: "4",
+//         name: "Headsets",
+//         image: [HeadSets],
+//         category: "Handheld",
+//         subCategory: "Entertain",
+//     },
+//     {
+//         _id: "5",
+//         name: "Ipad",
+//         image: [Ipad],
+//         category: "Handheld",
+//         subCategory: "Study",
+//     },
+//     {
+//         _id: "6",
+//         name: "Laptops",
+//         image: [Laptops],
+//         category: "Handheld",
+//         subCategory: "Study",
+//     },
+//     {
+//         _id: "7",
+//         name: "Phone",
+//         image: [Phone],
+//         category: "Handheld",
+//         subCategory: "DailyUse",
+//     },
+//     {
+//         _id: "8",
+//         name: "Television",
+//         image: [Television],
+//         category: "Home",
+//         subCategory: "DailyUse",
+//     },
+//     {
+//         _id: "9",
+//         name: "Electric Car",
+//         image: [ToyCar],
+//         category: "ElectricToys",
+//         subCategory: "Entertain",
+//     },
+//     {
+//         _id: "10",
+//         name: "Bluetooth Speaker",
+//         image: [BluetoothSpeaker],
+//         category: "Handheld",
+//         subCategory: "Entertain",
+//     },
+// ];
 
 
 export const productCategoriesOne = [

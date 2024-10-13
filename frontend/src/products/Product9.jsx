@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from "../Context/ShopContext";
-import { assets } from '../assets/assets';
+import { assets } from '../../public/assets/assets';
 import { Link } from 'react-router-dom';
 import "./style.css"
 

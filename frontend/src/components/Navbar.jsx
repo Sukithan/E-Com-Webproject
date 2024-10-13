@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
-import { assets } from '../assets/assets';
+import { assets } from '../../public/assets/assets';
 import { ShopContext } from "../Context/ShopContext";
 
 const Navbar = () => {

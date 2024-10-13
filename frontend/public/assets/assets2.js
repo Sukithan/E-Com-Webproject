@@ -5,7 +5,7 @@ import HeadSets from "./HeadSets.jpg"
 import Ipad from "./Ipad.jpeg"
 import Laptops from "./Laptops.jpg"
 import Phone from "./Phone.jpg"
-import Television from "./Televison.jpg"
+import Television from "./Television.jpg"
 import ToyCar from "./ToyCar.jpeg"
 import BluetoothSpeaker from "./BluetoothSpeaker.jpeg"
 
