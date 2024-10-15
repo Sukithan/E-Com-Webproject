@@ -26,7 +26,7 @@ const Navbar = () => {
     );
 
     if (foundProduct) {
-      navigate(`/product/${foundProduct.categoryId}`);
+      navigate(`/product1/${foundProduct.categoryId}`);
     } else {
       navigate("/NotFound");
     }

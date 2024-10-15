@@ -1,24 +1,34 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { ShopContext } from "../Context/ShopContext";
+import React, { useEffect, useState } from 'react';
 import { assets } from '../../public/assets/assets';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { productsItems } from '../../public/assets/assets2'; // Using productsItems
 import "./style.css"
 
 const Product1 = () => {
-  const { productCategoriesOne, currency } = useContext(ShopContext);
-  const [products, setProducts] = useState([]);
+  const { id } = useParams();  // Destructure the id from useParams
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   // Array of sold counts
   const soldCount = [23, 123, 78, 90];
   const offers = ["Best Price in similar deals", "Extra 5% off with coins", "Get free shipping with coins"];
 
+  // Function to fetch and filter product data based on categoryId
   const fetchProductData = async () => {
-    setProducts(productCategoriesOne);
+    // Get the selected product based on the id from useParams
+    const selectedProduct = productsItems.find((product) => product.categoryId === id);
+
+    if (selectedProduct) {
+      // Filter products with the same categoryId as the selected product
+      const filtered = productsItems.filter(
+        (product) => product.categoryId === selectedProduct.categoryId
+      );
+      setFilteredProducts(filtered);
+    }
   };
 
   useEffect(() => {
     fetchProductData();
-  }, [productCategoriesOne]);
+  }, [id]);
 
   // Function to truncate description
   const truncateDescription = (description, maxLength = 100) => {
@@ -28,7 +38,7 @@ const Product1 = () => {
 
   return (
     <div className='p-5 md:p-10 mb-5 transition-opacity ease-in duration-500 opacity-100'>
-      {products.map((product, index) => {
+      {filteredProducts.map((product, index) => {
         // Get a random sold count from the soldCount array
         const randomSoldCount = soldCount[Math.floor(Math.random() * soldCount.length)];
         const showOffer = index % 2 === 0; // Show offer for every second product
@@ -57,7 +67,7 @@ const Product1 = () => {
                   </div>
                   {/* Displaying random sold count */}
                   <p className='text-lg font-medium'>{randomSoldCount} items sold</p>
-                  <p className='text-3xl font-medium'>{currency}{product.price}</p>
+                  <p className='text-3xl font-medium'>$ {product.price}</p>
                   <p className='text-gray-500'>{truncateDescription(product.description)}</p>
                   
                   {/* Conditionally render the offer with animation */}

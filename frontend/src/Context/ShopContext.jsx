@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { productCategoriesOne, productCategoriesTwo, productCategoriesThree, productCategoriesFour, productCategoriesFive, productCategoriesSix, productCategoriesSeven, productCategoriesEight, productCategoriesNine, productCategoriesTen } from '../../public/assets/assets'; 
 import { productsItems } from "../../public/assets/assets2";
 
 export const ShopContext = createContext();
@@ -80,16 +79,6 @@ const ShopContextProvider = (props) => {
         // products,
         currency,
         delivery_fee,
-        productCategoriesOne,
-        productCategoriesTwo,
-        productCategoriesThree,
-        productCategoriesFour,
-        productCategoriesFive,
-        productCategoriesSix,
-        productCategoriesSeven,
-        productCategoriesEight,
-        productCategoriesNine,
-        productCategoriesTen,
         addToCart,
         cartItems,
         getCartCount,

@@ -13,7 +13,6 @@ const ProductCategory = () => {
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState("relevant");
   const [loading, setLoading] = useState(true); 
-  const { currency } = useContext(ShopContext);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -137,7 +136,6 @@ const ProductCategory = () => {
                 key={index}
                 name={item.name}
                 id={item._id}
-                price={item.price}
                 image={item.image} 
               />
             ))

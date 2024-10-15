@@ -7,7 +7,6 @@ import AboutUs from './pages/About_us';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import PlaceOrder from './pages/Place_order'; 
-import Product from './pages/Product';
 import Order from './pages/Order';
 import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
@@ -17,6 +16,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFound';
+import Product1 from './products/Product1';
 
 const App = () => {
   return (
@@ -31,7 +31,7 @@ const App = () => {
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Place_order' element={<PlaceOrder />} /> 
-        <Route path='/Product/:id' element={<Product />} />
+        <Route path='/Product1/:id' element={<Product1/>} />
         <Route path='/productDetails/:id' element={<ProductDetails/>} /> 
         <Route path='/Order' element={<Order />} />
         <Route path='/Profile' element={<Profile />} />

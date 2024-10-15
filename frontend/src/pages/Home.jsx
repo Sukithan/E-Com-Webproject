@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageSwitcher from '../components/ImageSwithcher';  
 import Card from '../components/Card';
-import { ShopContext } from '../Context/ShopContext';
+import { productsItems } from '../../public/assets/assets2';
 
 const images = [
   '/1.jpg',
@@ -13,24 +13,14 @@ const images = [
 ];
 
 const Home = () => {
-  const { 
-    productCategoriesOne, 
-    productCategoriesTwo, 
-    productCategoriesThree, 
-    productCategoriesEight, 
-    productCategoriesNine, 
-    productCategoriesFive 
-  } = useContext(ShopContext);
-
-  // Select one product from each category
   const productCategories = [
-    productCategoriesOne[0], 
-    productCategoriesTwo[0], 
-    productCategoriesThree[2], 
-    productCategoriesEight[0], 
-    productCategoriesNine[3], 
-    productCategoriesFive[2] 
-  ].filter(product => product); 
+    productsItems.find(product => product.categoryId === '1'),  
+    productsItems.find(product => product.categoryId === '2'),  
+    productsItems.find(product => product.categoryId === '3'),
+    productsItems.find(product => product.categoryId === '8'),
+    productsItems.find(product => product.categoryId === '9'),
+    productsItems.find(product => product.categoryId === '5')
+  ].filter(product => product);
 
   return (
     <div className='flex flex-col'>

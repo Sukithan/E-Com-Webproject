@@ -2,26 +2,27 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from "../Context/ShopContext";
 import { useParams } from 'react-router-dom';
 import { assets } from '../../public/assets/assets';
+import axios from 'axios';
 
 const ProductDetails = () => {
-  const { id } = useParams(); 
-  const { currency, addToCart, productsItems } = useContext(ShopContext);
+  const { id } = useParams();
+  const { currency, productsItems } = useContext(ShopContext);
   const [product, setProduct] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    const foundProduct = productsItems.find(item => item._id === id); 
+    const foundProduct = productsItems.find(item => item._id === id);
     setProduct(foundProduct);
     if (foundProduct) {
-      const initialColor = foundProduct.variants[0].color; 
-      const initialSize = foundProduct.variants[0].sizes[0].size; 
+      const initialColor = foundProduct.variants[0].color;
+      const initialSize = foundProduct.variants[0].sizes[0].size;
       setSelectedColor(initialColor);
       setSelectedSize(initialSize);
-      setSelectedImage(foundProduct.image[initialColor]); 
+      setSelectedImage(foundProduct.image[initialColor]);
     }
-  }, [id, productsItems]); 
+  }, [id, productsItems]);
 
   if (!product) {
     return <div className='p-10'>Product not found!</div>;
@@ -40,22 +41,38 @@ const ProductDetails = () => {
     setSelectedSize(size);
   };
 
-  const ratingValue = product.rating || 0; // Default to 0 if rating is undefined
-  const totalStars = 5; // Total stars to display
+  const handleAddToCart = async () => {
+    try {
+      const response = await axios.post('http://localhost:3000/addCart', {
+        id: product._id,
+        name: product.name,
+        price: product.price,
+        count: 1,
+      });
+      console.log('Added to cart:', response.data); // You can use this data as needed
+      const cartResponse = await axios.get('http://localhost:3000/cart', { withCredentials: true });
+      console.log('Cart fetch response:', cartResponse.data);
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
+      alert('Could not add product to cart. Please try again.');
+    }
+  };  
+
+  const ratingValue = product.rating || 0; 
+  const totalStars = 5; 
 
   return (
     <div className='border-t-2 p-7 transition-opacity ease-in duration-500 opacity-100'>
       <div className='flex flex-col sm:flex-row'>
         <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
           <div className='sm:w-[80%]'>
-            <img src={selectedImage} alt={product.name} className='w-full h-auto' />
+            <img src={product.image} alt={product.name} className='w-full h-auto mb-3' />
           </div>
         </div>
 
         <div className='flex-1'>
           <h1 className='font-medium text-2xl mt-2'>{product.name}</h1>
           <div className='flex items-center gap-1 mt-2'>
-            {/* Star Ratings */}
             <div className='flex flex-row gap-2 my-1'>
               {Array.from({ length: totalStars }, (_, index) => (
                 <img 
@@ -103,13 +120,13 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <button
-            className='mt-6 px-6 py-2 bg-purple-500 text-white rounded'
-            onClick={() => addToCart(product._id)}
-          >
+          <button onClick={handleAddToCart} className="mt-4 bg-purple-500 text-white px-4 py-2 rounded">
             Add to Cart
           </button>
-          <p className='bg-amber-200 text-amber-700 my-6 p-2'><i className="fa-solid fa-certificate"></i> Certified brands and genuine items</p>
+          
+          <p className='bg-amber-200 text-amber-700 my-6 p-2'>
+            <i className="fa-solid fa-certificate"></i> Certified brands and genuine items
+          </p>
         </div>
       </div>
 
