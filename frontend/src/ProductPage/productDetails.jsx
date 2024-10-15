@@ -41,20 +41,23 @@ const ProductDetails = () => {
     setSelectedSize(size);
   };
 
+  // New: Handle Add to Cart functionality
   const handleAddToCart = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/addCart', {
-        id: product._id,
-        name: product.name,
+      const cartItem = {
+        user_id: 1, 
+        product_id: product._id,
+        product_name: product.name,
+        quantity: 1, 
         price: product.price,
-        count: 1,
-      });
-      console.log('Added to cart:', response.data); // You can use this data as needed
-      const cartResponse = await axios.get('http://localhost:3000/cart', { withCredentials: true });
-      console.log('Cart fetch response:', cartResponse.data);
+      };
+  
+      // Use the full backend URL
+      await axios.post('http://localhost:3000/cart/add', cartItem);
+      alert('Product added to cart!');
     } catch (error) {
       console.error('Error adding product to cart:', error);
-      alert('Could not add product to cart. Please try again.');
+      alert('Failed to add product to cart.');
     }
   };  
 
