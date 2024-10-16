@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 
+
 const Cart = () => {
   const { cartItems, productsItems, incrementCartItem, decrementCartItem, removeCartItem, buyCartItem } = useContext(ShopContext);
   const [items, setItems] = useState([]);
