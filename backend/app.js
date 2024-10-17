@@ -41,10 +41,12 @@ app.get("/productcategory", (req, res) => {
 
 // Route setup
 const userRoutes = require('./routes/userRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 // const categoryRoutes = require('./routes/categoryRoutes');
 // const productRoutes = require('./routes/productRoutes');
 
 app.use('/', userRoutes);
+app.use('/', adminRoutes);
 // app.use('/', categoryRoutes);
 // app.use('/', productRoutes);
 
