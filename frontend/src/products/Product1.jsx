@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { assets } from '../../public/assets/assets';
 import { Link, useParams } from 'react-router-dom';
-import { productsItems } from '../../public/assets/assets2'; // Using productsItems
+import { productsItems } from '../../public/assets/assets2'; 
 import "./style.css"
 
 const Product1 = () => {
@@ -83,6 +83,9 @@ const Product1 = () => {
           </div>
         );
       })}
+        <div className='text-center mt-9'>
+              <Link to={"/productcategory"} className='bg-purple-500 text-white p-4 text-lg font-bold rounded'>Other Categories</Link>
+        </div>
     </div>
   );
 };

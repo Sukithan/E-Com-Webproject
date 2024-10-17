@@ -4,27 +4,35 @@ import { assets } from '../../public/assets/assets';
 import { ShopContext } from "../Context/ShopContext";
 
 const Navbar = () => {
-  const { getCartCount, productsItems } = useContext(ShopContext);
+  const { productsItems } = useContext(ShopContext);
+  const [cartCount,setCartCount] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
   const [searchQuery, setSearchQuery] = useState(""); 
+  const [error, setError] = useState(null);
   const navigate = useNavigate(); 
 
-  useEffect(() => {
-    const fetchCartCount = async () => {
-      const count = await getCartCount();
-      setCartCount(count); 
-    };
+  const userId = 1;
 
+  useEffect(() => {
     fetchCartCount();
-  }, [getCartCount]);
+  }, []);
+
+  const fetchCartCount = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/cart/count/${userId}`);
+      const data = await response.json();
+      setCartCount(data.count);
+    } catch (error) {
+      setError('Error fetching cart items. Please try again.');
+      console.error('Error fetching cart items:', error);
+    } 
+  };
 
   // Function to handle search
   const handleSearch = () => {
     const foundProduct = productsItems.find(
       (item) => item.type.toLowerCase() === searchQuery.toLowerCase() 
     );
-
     if (foundProduct) {
       navigate(`/product1/${foundProduct.categoryId}`);
     } else {

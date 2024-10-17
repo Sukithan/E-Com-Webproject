@@ -158,7 +158,45 @@ app.get('/cart/total/:userId', (req, res) => {
   );
 });
 
+//Caluculate Count
+app.get('/cart/count/:userId', (req, res) => {
+  const userId = req.params.userId;
+
+  pool.query(
+    "SELECT COUNT(id) AS count FROM cart_items WHERE user_id = ?",
+    [userId],
+    (err, results) => {
+      if (err) {
+        console.error("Error fetching total count:", err);
+        return res.status(500).send("Error fetching total count.");
+      }
+      res.json({ count: results[0].count || 0 }); // Send the count value
+    }
+  );
+});
+
+
 // End cart
+
+// Contact Start
+
+app.post('/contact/add', (req, res) => {
+  const { name, email, message } = req.body;
+
+  pool.query(
+    "INSERT INTO Contact (name, email, message) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE message = VALUES(message)",
+    [name, email, message],
+    (err, result) => {
+      if (err) {
+        console.error("Error adding contact message:", err);
+        return res.status(500).send("Error adding contact message.");
+      }
+      res.send("Contact message added successfully.");
+    }
+  );
+});
+
+// Contact End
 
 // Start the server
 const PORT = process.env.PORT || 3000;
