@@ -1,18 +1,13 @@
+//admin Controllers
 const adminService = require('../services/adminService');
 
-exports.login = async (req, res) => {
-    const {username, password} = req.body;
-
+// Customer Order Report
+exports.customerOrderReport = async (req, res) => {
+    try {
+        const report = await adminService.getCustomerOrderReport();
+        res.status(200).json(report);
+    } catch (error) {
+        res.status(500).json({ message: 'Error retrieving customer order report' });
+    }
 };
 
-exports.quarterlySalesReport = async (req, res) => {
-    const {year} = req.body;
-};
-
-exports.topSellingProducts = async (req, res) => {
-    const {startDate, endDate} = req.body;
-};
-
-exports.salesByCategory = async (req, res) => {
-    
-};

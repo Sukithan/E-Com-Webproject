@@ -7,7 +7,8 @@ import CustomerOrderReport from './components/CustomerOrderReport'; // Import yo
 import TopSellingproduct from './components/TopSellingproduct'; // Import your QuarterlySalesReport component
 import ProductCategoryWithMostOrders from './components/ProductCategoryWithMostOrders'; // Import your QuarterlySalesReport component
 import ProductInterestTimePeriod from './components/ProductInterestTimePeriod'; // Import your QuarterlySalesReport component
-import UserMassege from './components/UserMassege';
+import MessagesList from './components/MessageList';
+import MessageDetails from './components/MessageDetails';
 
 import './App.css';
 
@@ -32,7 +33,8 @@ const App = () => {
         <Route path="/top-selling-products" element={isLoggedIn ? <TopSellingproduct /> : <Navigate to="/login" />} />
         <Route path="/product-category-orders" element={isLoggedIn ? <ProductCategoryWithMostOrders /> : <Navigate to="/login" />} />
         <Route path="/product-interest-trend" element={isLoggedIn ? <ProductInterestTimePeriod /> : <Navigate to="/login" />} />
-        <Route path="/user-message" element={isLoggedIn ? <UserMassege /> : <Navigate to="/login" />} />
+        <Route path="/user-message" element={isLoggedIn ? <MessagesList /> : <Navigate to="/login" />} />
+        <Route path="message/:id" element={isLoggedIn ? <MessageDetails /> : <Navigate to="/login" />} />
       </Routes>
     </Router>
   );

@@ -77,3 +77,4 @@ exports.login = async (email, password) => {
 // Secret or Private Key: A secret key used to sign and verify the token, ensuring its authenticity.
 // Options: Additional settings like token expiration.
 //const token = jwt.sign({ id: user[0].id, email: user[0].email }, 'hi123', { expiresIn: '24h' });
+
