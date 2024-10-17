@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const userService = require('../services/userService');
 
 // Middleware to check if the user is authenticated
 const authenticateJWT = (req, res, next) => {
@@ -13,8 +14,12 @@ const authenticateJWT = (req, res, next) => {
       return res.status(403).json({ message: 'Invalid token' });
     }
 
-    req.user = user;  // Attach user data to request object
-    next();  // Pass control to the next middleware or controller
+    //req.user = user;  // Attach user data to request object
+    //next();  // Pass control to the next middleware or controller
+
+    if(!userService.checkIfUserExists(user.email)){
+      return res.status(404).json({ message: 'Invalid token, user not found!' });
+    }
   });
 };
 
