@@ -40,7 +40,7 @@ const Login = () => {
         console.log("Token stored successfully:", token);
         
         // Redirect to another page or do further actions
-        //window.location.href = "/";
+        window.location.href = "/";
         // return;
       }
       else{

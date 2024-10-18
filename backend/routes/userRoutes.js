@@ -6,7 +6,7 @@ const authenticateJWT = require('../middlewares/authMiddleware');
 // Define routes for users
 router.post('/signup', userController.signup);
 router.post('/login', userController.login);
-router.get('/authentication', authenticateJWT);
+router.post('/authentication', authenticateJWT);
 
 module.exports = router;
 

@@ -130,7 +130,7 @@ const Profile = () => {
   useEffect(() => {
     const checkToken = async () => {
       const token = localStorage.getItem('token'); // Retrieve token from localStorage
-      
+      console.log(token);
       if (!token) {
         // No token found, redirect to login page
         navigate('/Login');
@@ -139,10 +139,10 @@ const Profile = () => {
 
       try {
         // Verify token with backend
-        await axios.get('http://localhost:3001/authentication', {
-          headers: {
-            Authorization: `Bearer ${token}` // Send token in request header
-          }
+        await axios.post('http://localhost:3001/authentication', {
+          
+            authorization: token
+          
         });
         
         // Token is valid, continue to stay on the page

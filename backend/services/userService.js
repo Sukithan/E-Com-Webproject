@@ -6,9 +6,10 @@ const db = require('../config/db');
 exports.signup = async (firstname, lastname, email, password) => {
 
   // If a user with the email already exists, return an error message
-  if (this.checkIfUserExists(email)) {
+  if (await this.checkIfUserExists(email)) {
     throw new Error('User123 with this email already exists');
   }
+  else{
   
   // If no user exists, proceed to hash the password and insert new user
   // bcrypt.hash(password, 10) hashes the user's password with a salt value of 10. This makes the password more secure by introducing randomness (the "salt").
@@ -24,20 +25,21 @@ exports.signup = async (firstname, lastname, email, password) => {
   const token = jwt.sign({ id: user[0].customer_id, email: user[0].email }, process.env.JWT_SECRET, { expiresIn: '24h' });
 
   return token;
+  }
 };
 
 // Login logic: authenticate a user
 exports.login = async (email, password) => {
   
+  const sql = 'SELECT * FROM registered_customer WHERE email = ?';
+  const [user] = await db.execute(sql, [email]);
+
+  if (!user[0]) throw new Error('User not found');
   
-  if (!this.checkIfUserExists(email)) throw new Error('User not found');
-  
-  //If the user exists, the function compares the hashed password stored in the database with the password provided by the user using bcrypt.compare(). If the passwords don't match, an error is thrown for invalid credentials.
   const passwordMatch = await bcrypt.compare(password, user[0].password_hash);
   if (!passwordMatch) throw new Error('Invalid credentials');
-  
+
   const token = jwt.sign({ id: user[0].id, email: user[0].email }, process.env.JWT_SECRET, { expiresIn: '24h' });
-  // A JWT is created using the user's ID (customer_id) and email. The token is signed with a secret key stored in the environment variables (process.env.JWT_SECRET), and it expires after 24 hours. This token will be used for authenticating future requests from the user.
   return token;
 };
 
